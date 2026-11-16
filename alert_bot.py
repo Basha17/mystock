@@ -1,11 +1,19 @@
-# NSE alert bot v5 - BUY alerts only, ranked by quick-rise strength.
+# NSE alert bot v6 - dynamic watchlist + BUY alerts ranked by quick-rise strength.
 # Runs on GitHub Actions every 5 minutes (see scan.yml).
-# Env vars: TELEGRAM_TOKEN, TELEGRAM_CHAT_ID  (set as GitHub secrets)
-# Optional: MIN_QUICK (default 5 = STRONG or HOT), MAX_ALERTS (default 10)
+#
+# At ~10:00 AM and ~1:00 PM IST it scans the whole universe (Nifty 500), keeps the
+# 47 liquid stocks with the strongest momentum, and uses that shortlist until the
+# next refresh. Before 10:00 AM it uses the default 47-stock list.
+#
+# Env var (GitHub secret): NTFY_TOPIC
+# Optional: MIN_QUICK (default 5), MAX_ALERTS (10), SHORTLIST_SIZE (47),
+#           MIN_TURNOVER_CR (10 = Rs 10 crore average daily traded value)
 
 import os
+import io
 import sys
 import json
+import time
 import requests
 import yfinance as yf
 import pandas as pd
@@ -14,10 +22,17 @@ from zoneinfo import ZoneInfo
 
 IST = ZoneInfo("Asia/Kolkata")
 STATE_FILE = "state.json"
+WATCHLIST_FILE = "watchlist.json"
+
 MIN_QUICK = float(os.getenv("MIN_QUICK", "5"))
 MAX_ALERTS = int(os.getenv("MAX_ALERTS", "10"))
+SHORTLIST_SIZE = int(os.getenv("SHORTLIST_SIZE", "47"))
+MIN_TURNOVER_CR = float(os.getenv("MIN_TURNOVER_CR", "10"))
+MIN_PRICE = 30
 
-WATCHLIST = [
+UNIVERSE_URL = "https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv"
+
+DEFAULT_WATCHLIST = [
     "RELIANCE", "TCS", "HDFCBANK", "ICICIBANK", "INFY", "BHARTIARTL", "ITC",
     "SBIN", "LT", "HINDUNILVR", "KOTAKBANK", "AXISBANK", "BAJFINANCE",
     "MARUTI", "SUNPHARMA", "HCLTECH", "M&M", "NTPC", "TITAN", "ULTRACEMCO",
@@ -28,6 +43,8 @@ WATCHLIST = [
     "SHRIRAMFIN", "BAJAJ-AUTO", "ADANIENT", "BEL",
 ]
 
+
+# ---------------------------------------------------------------- indicators
 
 def tick(x):
     return round(round(x / 0.05) * 0.05, 2)
@@ -40,14 +57,13 @@ def rsi(close, period=14):
     return 100 - (100 / (1 + gain / loss))
 
 
-def analyse(symbol):
-    df = yf.download(symbol + ".NS", period="5d", interval="5m",
-                     progress=False, auto_adjust=True)
-    if df is None or df.empty:
+def analyse_df(symbol, df):
+    cols = ["Open", "High", "Low", "Close", "Volume"]
+    if any(c not in df.columns for c in cols):
         return None
-    if isinstance(df.columns, pd.MultiIndex):
-        df.columns = df.columns.get_level_values(0)
-    df = df.dropna()
+    df = df[cols].dropna().copy()
+    if df.empty:
+        return None
 
     idx = df.index
     if idx.tz is None:
@@ -79,6 +95,11 @@ def analyse(symbol):
     prev_vols = [df[df["date"] == d]["Volume"].iloc[:n].sum() for d in days[:-1]]
     avg_prev = sum(prev_vols) / len(prev_vols) if prev_vols else 0
     vol_ratio = (t["Volume"].sum() / avg_prev) if avg_prev > 0 else 1.0
+
+    # Average daily traded value on previous days (Rs crore) - liquidity filter
+    turn = [float((df[df["date"] == d]["Close"] * df[df["date"] == d]["Volume"]).sum())
+            for d in days[:-1]]
+    turnover_cr = (sum(turn) / len(turn)) / 1e7 if turn else 0.0
 
     close = df["Close"]
     ema9 = close.ewm(span=9, adjust=False).mean()
@@ -189,13 +210,95 @@ def analyse(symbol):
     return {"stock": symbol, "price": round(last, 2), "mom30": round(mom30, 2),
             "vol_x": round(vol_ratio, 1), "score": score, "quick": round(quick, 1),
             "rise": rise, "action": action, "entry": entry, "stop": stop,
-            "target": target, "why": "; ".join(why)}
+            "target": target, "why": "; ".join(why),
+            "turnover_cr": round(turnover_cr, 1),
+            "last_date": last_ts.date().isoformat()}
 
 
-def send_ntfy(text):
-    """Push notification to the ntfy app on the iPhone (topic = NTFY_TOPIC secret)."""
+# ---------------------------------------------------------------- data fetching
+
+def get_universe():
+    """All Nifty 500 symbols from NSE. Falls back to the default list if the download fails."""
+    try:
+        resp = requests.get(UNIVERSE_URL, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+        resp.raise_for_status()
+        table = pd.read_csv(io.StringIO(resp.text))
+        col = [c for c in table.columns if c.strip().lower() == "symbol"][0]
+        symbols = sorted(set(table[col].astype(str).str.strip()))
+        if len(symbols) > 100:
+            print("Universe loaded:", len(symbols), "stocks")
+            return symbols
+    except Exception as e:
+        print("Could not download the stock universe:", e)
+    print("Using the default watchlist as the universe.")
+    return list(DEFAULT_WATCHLIST)
+
+
+def fetch_batch(symbols):
+    """Download 5-minute data for several stocks at once. Returns {symbol: DataFrame}."""
+    out = {}
+    tickers = [s + ".NS" for s in symbols]
+    try:
+        data = yf.download(tickers, period="5d", interval="5m", group_by="ticker",
+                           threads=True, progress=False, auto_adjust=True)
+    except Exception as e:
+        print("Batch download failed:", e)
+        return out
+    if data is None or data.empty:
+        return out
+    if isinstance(data.columns, pd.MultiIndex):
+        level0 = set(data.columns.get_level_values(0))
+        for s in symbols:
+            tk = s + ".NS"
+            if tk in level0:
+                sub = data[tk].dropna(how="all")
+                if not sub.empty:
+                    out[s] = sub
+    elif len(symbols) == 1:
+        out[symbols[0]] = data.dropna(how="all")
+    return out
+
+
+def analyse_many(symbols, batch_size=50):
+    results = []
+    for i in range(0, len(symbols), batch_size):
+        chunk = symbols[i:i + batch_size]
+        frames = fetch_batch(chunk)
+        if not frames:                      # one retry if Yahoo returned nothing
+            time.sleep(5)
+            frames = fetch_batch(chunk)
+        for s, d in frames.items():
+            try:
+                res = analyse_df(s, d)
+            except Exception as e:
+                print("skipped", s, e)
+                continue
+            if res:
+                results.append(res)
+        time.sleep(1)
+    return results
+
+
+def pick_shortlist(results):
+    """Liquid stocks traded in the latest session, ranked by quick-rise strength."""
+    if not results:
+        return []
+    latest = max(r["last_date"] for r in results)
+    ok = [r for r in results
+          if r["last_date"] == latest
+          and r["turnover_cr"] >= MIN_TURNOVER_CR
+          and r["price"] >= MIN_PRICE]
+    ok.sort(key=lambda r: r["quick"], reverse=True)
+    return ok[:SHORTLIST_SIZE]
+
+
+# ---------------------------------------------------------------- notifications
+
+def notify(text):
+    """Send a push notification to the ntfy app. Returns True if it was delivered."""
     topic = os.getenv("NTFY_TOPIC")
     if not topic:
+        print("NTFY_TOPIC secret missing. Message was:\n", text)
         return False
     try:
         resp = requests.post(f"https://ntfy.sh/{topic}",
@@ -209,25 +312,7 @@ def send_ntfy(text):
         return False
 
 
-def send_telegram(text):
-    """Sends via ntfy and/or Telegram. Returns True if at least one worked."""
-    ok_ntfy = send_ntfy(text)
-
-    token = os.getenv("TELEGRAM_TOKEN")
-    chat_id = os.getenv("TELEGRAM_CHAT_ID")
-    ok_tg = False
-    if token and chat_id:
-        try:
-            resp = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
-                                 data={"chat_id": chat_id, "text": text[:4000]}, timeout=20)
-            print("Telegram status:", resp.status_code, resp.text[:200])
-            ok_tg = resp.ok
-        except Exception as e:
-            print("Telegram error:", e)
-    elif not os.getenv("NTFY_TOPIC"):
-        print("No notification channel configured. Message was:\n", text)
-    return ok_ntfy or ok_tg
-
+# ---------------------------------------------------------------- saved state
 
 def load_state(today):
     try:
@@ -243,41 +328,86 @@ def save_state(state):
         json.dump(state, f)
 
 
+def load_watchlist(today):
+    try:
+        with open(WATCHLIST_FILE) as f:
+            data = json.load(f)
+        if data.get("date") == today and data.get("stocks"):
+            return data
+    except Exception:
+        pass
+    return {"date": today, "refreshed": [], "stocks": list(DEFAULT_WATCHLIST)}
+
+
+def save_watchlist(wl):
+    with open(WATCHLIST_FILE, "w") as f:
+        json.dump(wl, f)
+
+
+# ---------------------------------------------------------------- main
+
 def main():
     if os.getenv("TEST", "").lower() == "true" or "test" in sys.argv:
-        ok = send_telegram("Scanner connected. You will get BUY alerts here "
+        ok = notify("Scanner connected. You will get BUY alerts here "
                            "during NSE market hours.")
         print("Test message sent." if ok else "Test message failed.")
         return
 
     now = datetime.now(IST)
-    in_hours = now.weekday() < 5 and (9, 30) <= (now.hour, now.minute) <= (15, 25)
-    if not in_hours and os.getenv("FORCE") != "1":
+    hm = (now.hour, now.minute)
+    force_refresh = os.getenv("FORCE_REFRESH") == "1"
+    in_hours = now.weekday() < 5 and (9, 30) <= hm <= (15, 25)
+    if not in_hours and os.getenv("FORCE") != "1" and not force_refresh:
         print("Outside market hours, nothing to do.", now)
         return
 
     today = now.date().isoformat()
     state = load_state(today)
-    candidates = []
+    wl = load_watchlist(today)
 
-    for s in WATCHLIST:
-        try:
-            res = analyse(s)
-        except Exception as e:
-            print("skipped", s, e)
-            continue
-        if not res:
-            continue
+    # Decide whether the watchlist should be refreshed on this run
+    slot = None
+    if force_refresh:
+        slot = "M"
+    elif (10, 0) <= hm < (12, 30) and "A" not in wl["refreshed"]:
+        slot = "A"
+    elif (13, 0) <= hm < (14, 30) and "B" not in wl["refreshed"]:
+        slot = "B"
+
+    if slot:
+        universe = get_universe()
+        all_results = analyse_many(universe)
+        picks = pick_shortlist(all_results)
+        wl["refreshed"].append(slot)
+        if len(picks) >= 10:
+            wl["stocks"] = [r["stock"] for r in picks]
+            results = picks
+            names = ", ".join(r["stock"] for r in picks[:15])
+            notify(f"Watchlist refreshed {now.strftime('%H:%M')} IST. "
+                          f"Scanned {len(all_results)} of {len(universe)} stocks, "
+                          f"shortlisted {len(picks)} with the strongest momentum.\n"
+                          f"Top: {names}")
+        else:
+            print("Shortlist too small; keeping the current watchlist.")
+            notify(f"Watchlist refresh at {now.strftime('%H:%M')} IST failed "
+                          f"(only {len(all_results)} stocks had data). Keeping the previous list.")
+            results = analyse_many(wl["stocks"])
+        save_watchlist(wl)
+    else:
+        results = analyse_many(wl["stocks"])
+
+    candidates = []
+    for res in results:
         # Alert only on actionable buys with strong quick-rise strength
         if res["action"].startswith(("BUY NOW", "WATCH")) and res["quick"] >= MIN_QUICK:
-            key = f"{s}:BUY"
+            key = f"{res['stock']}:BUY"
             prev = state.get(key)
             # New today, or upgraded from STRONG to HOT
             if prev is None or (str(prev).endswith("STRONG") and res["rise"] == "HOT"):
                 candidates.append((key, res))
 
     if not candidates:
-        print("No new buy signals.", now.strftime("%H:%M"))
+        print("No new buy signals.", now.strftime("%H:%M"), "stocks scanned:", len(results))
         save_state(state)
         return
 
@@ -295,7 +425,7 @@ def main():
     lines.append("Ranking by current momentum, not a guaranteed rise. Not financial advice.")
     lines.append("Always use the stop-loss.")
 
-    if send_telegram("\n".join(lines)):
+    if notify("\n".join(lines)):
         for key, res in candidates:
             state[key] = f"{today}|{res['rise']}"
     save_state(state)
