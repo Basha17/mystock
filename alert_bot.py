@@ -1,9 +1,9 @@
 # NSE alert bot v6 - dynamic watchlist + BUY alerts ranked by quick-rise strength.
 # Runs on GitHub Actions every 5 minutes (see scan.yml).
 #
-# At ~10:00 AM and ~1:00 PM IST it scans the whole universe (Nifty 500), keeps the
+# At ~9:30 AM and ~1:00 PM IST it scans the whole universe (Nifty 500), keeps the
 # 47 liquid stocks with the strongest momentum, and uses that shortlist until the
-# next refresh. Before 10:00 AM it uses the default 47-stock list.
+# next refresh. The default 47-stock list is used only until the first refresh works.
 #
 # Env var (GitHub secret): NTFY_TOPIC
 # Optional: MIN_QUICK (default 5), MAX_ALERTS (10), SHORTLIST_SIZE (47),
@@ -369,7 +369,7 @@ def main():
     slot = None
     if force_refresh:
         slot = "M"
-    elif (10, 0) <= hm < (12, 30) and "A" not in wl["refreshed"]:
+    elif (9, 30) <= hm < (12, 30) and "A" not in wl["refreshed"]:
         slot = "A"
     elif (13, 0) <= hm < (14, 30) and "B" not in wl["refreshed"]:
         slot = "B"
