@@ -29,6 +29,7 @@ MAX_ALERTS = int(os.getenv("MAX_ALERTS", "10"))
 SHORTLIST_SIZE = int(os.getenv("SHORTLIST_SIZE", "47"))
 MIN_TURNOVER_CR = float(os.getenv("MIN_TURNOVER_CR", "10"))
 MIN_PRICE = 30
+HEARTBEAT = os.getenv("HEARTBEAT", "1") == "1"   # set to 0 to turn off hourly check-ins
 
 UNIVERSE_URL = "https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv"
 
@@ -344,6 +345,20 @@ def save_watchlist(wl):
         json.dump(wl, f)
 
 
+def send_heartbeat(results, now):
+    """Hourly 'still alive' message with the closest-to-signal stocks."""
+    close = sorted([r for r in results if r["score"] > 0],
+                   key=lambda r: r["quick"], reverse=True)[:3]
+    lines = [f"Scanner running {now.strftime('%H:%M')} IST - no new strong signals.",
+             f"Watching {len(results)} stocks."]
+    if close:
+        lines.append("Closest to a signal:")
+        for i, r in enumerate(close, 1):
+            lines.append(f"{i}. {r['stock']} {r['price']} (quick {r['quick']}) - {r['action']}")
+    lines.append("Next hourly check-in unless a strong signal appears first.")
+    notify("\n".join(lines))
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -396,6 +411,10 @@ def main():
     else:
         results = analyse_many(wl["stocks"])
 
+    hour_tag = f"{today}|{now.hour:02d}"
+    if slot:
+        state["_heartbeat"] = hour_tag   # the refresh note already counts as a check-in
+
     candidates = []
     for res in results:
         # Alert only on actionable buys with strong quick-rise strength
@@ -408,6 +427,9 @@ def main():
 
     if not candidates:
         print("No new buy signals.", now.strftime("%H:%M"), "stocks scanned:", len(results))
+        if HEARTBEAT and state.get("_heartbeat") != hour_tag:
+            send_heartbeat(results, now)
+            state["_heartbeat"] = hour_tag
         save_state(state)
         return
 
@@ -428,6 +450,7 @@ def main():
     if notify("\n".join(lines)):
         for key, res in candidates:
             state[key] = f"{today}|{res['rise']}"
+        state["_heartbeat"] = hour_tag   # an alert counts as a check-in too
     save_state(state)
 
 
