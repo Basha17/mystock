@@ -1,26 +1,30 @@
 name: NSE scanner
 
+# One job per trading day that loops internally every 5 minutes.
+# This avoids GitHub's unreliable "every 5 minutes" schedule: it only needs
+# ONE trigger per day, and a second backup trigger in case the first is late.
+
 on:
   schedule:
-    # Every 5 minutes, 04:00-09:55 UTC = 09:30-15:25 IST, Mon-Fri
-    - cron: '*/5 4-9 * * 1-5'
+    - cron: '57 3 * * 1-5'   # 09:27 IST, main start
+    - cron: '35 4 * * 1-5'   # 10:05 IST, backup start (harmless if already running)
   workflow_dispatch:
     inputs:
       test:
         description: 'Send a test notification only (true/false)'
         default: 'false'
       refresh:
-        description: 'Force a full watchlist refresh now (true/false)'
+        description: 'Run one full watchlist refresh now (true/false)'
         default: 'false'
 
 concurrency:
-  group: scanner
+  group: ${{ github.event.inputs.test == 'true' && 'scanner-test' || 'scanner' }}
   cancel-in-progress: false
 
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
@@ -41,8 +45,32 @@ jobs:
           restore-keys: state-
 
       - name: Run scanner
-        run: python alert_bot.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           TEST: ${{ github.event.inputs.test }}
           FORCE_REFRESH: ${{ github.event.inputs.refresh == 'true' && '1' || '0' }}
+        run: |
+          # Single runs for the test / refresh buttons
+          if [ "$TEST" = "true" ] || [ "$FORCE_REFRESH" = "1" ]; then
+            python alert_bot.py
+            exit 0
+          fi
+
+          # If the job started a little early, wait for the 09:30 IST open (04:00 UTC)
+          OPEN=$(date -u -d "04:00" +%s)
+          GAP=$((OPEN - $(date +%s)))
+          if [ "$GAP" -gt 0 ] && [ "$GAP" -lt 1800 ]; then
+            echo "Waiting ${GAP}s for the market open"
+            sleep "$GAP"
+          fi
+
+          # Then loop every 5 minutes until 15:15 IST (09:45 UTC)
+          END=$(date -u -d "09:45" +%s)
+          echo "Loop started $(date -u). Stops at $(date -u -d @"$END")."
+          while [ "$(date +%s)" -lt "$END" ]; do
+            START=$(date +%s)
+            python alert_bot.py || echo "scan failed, continuing"
+            WAIT=$((300 - ($(date +%s) - START)))
+            if [ "$WAIT" -gt 0 ]; then sleep "$WAIT"; fi
+          done
+          echo "Loop finished $(date -u)."
