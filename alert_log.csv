@@ -39,3 +39,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,13:40:06,NTPCGREEN,EARLY,82.8,82.45,83.3,3.8,above VWAP; opening-range breakout; fresh EMA bullish cross; volume 1.6x normal; RSI 76 stretched; +1.0% last 30 min; +0.9% in 15 min on 24.4x volume
 2026-11-18,13:50:06,UBL,WATCH,1205.8,1200.75,1213.35,5.4,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
 2026-11-18,13:50:06,DEEPAKFERT,EARLY,1463.4,1451.05,1481.9,3.2,above VWAP; +3.1% from open; opening-range breakout; short-term up; RSI 80 stretched; already extended; +1.7% last 30 min; +1.9% in 15 min on 2.2x volume
+2026-11-18,13:55:06,IEX,CONFIRMED,116.9,116.05,118.2,7.0,above VWAP; +2.2% from open; opening-range breakout; fresh EMA bullish cross; volume 1.9x normal; +0.6% last 30 min
+2026-11-18,13:55:06,UBL,EARLY,1211.5,1205.65,1220.25,4.0,above VWAP; +1.5% from open; opening-range breakout; fresh EMA bullish cross; already extended; +1.0% last 30 min; +0.9% in 15 min on 3.0x volume
