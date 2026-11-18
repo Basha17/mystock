@@ -10,3 +10,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,10:05:04,MRPL,CONFIRMED,178.85,177.1,181.45,6.7,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.7x normal; RSI 79 stretched; +1.9% last 30 min
 2026-11-18,10:10:04,BIOCON,CONFIRMED,362.75,360.35,366.35,6.7,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 2.1x normal; +1.1% last 30 min
 2026-11-18,10:10:04,KAYNES,WATCH,2919.0,2890.25,2962.1,5.2,above VWAP; +2.1% from open; opening-range breakout; short-term up; +1.2% last 30 min
+2026-11-18,10:15:04,J&KBANK,WATCH,141.1,139.7,143.2,6.1,above VWAP; +1.6% from open; opening-range breakout; fresh EMA bullish cross; +1.1% last 30 min
+2026-11-18,10:15:04,EIHOTEL,EARLY,319.8,315.6,326.1,3.8,above VWAP; +3.1% from open; short-term up; volume 2.4x normal; already extended; +1.6% last 30 min; +1.4% in 15 min on 6.4x volume
