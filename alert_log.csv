@@ -23,3 +23,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,11:00:05,AZAD,EARLY,2330.0,2296.75,2379.9,3.8,above VWAP; +1.2% from open; opening-range breakout; short-term down; volume 11.0x normal; +0.7% in 15 min on 1.6x volume
 2026-11-18,11:05:04,SAGILITY,CONFIRMED,45.0,44.5,45.7,7.1,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 9.1x normal; +0.6% last 30 min
 2026-11-18,11:20:05,GILLETTE,CONFIRMED,7237.5,7196.3,7299.3,5.9,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 2.2x normal; RSI 77 stretched; +0.9% last 30 min
+2026-11-18,11:30:05,STARHEALTH,WATCH,560.15,556.05,566.35,5.0,above VWAP; +2.3% from open; opening-range breakout; short-term up; +1.0% last 30 min
