@@ -37,3 +37,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,13:25:05,AZAD,CONFIRMED,2341.4,2321.0,2372.0,6.3,above VWAP; +1.6% from open; opening-range breakout; fresh EMA bullish cross; volume 7.4x normal; +0.8% last 30 min
 2026-11-18,13:35:05,ACE,EARLY,1180.35,1172.7,1191.8,3.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; RSI 80 stretched; already extended; +1.6% last 30 min; +0.7% in 15 min on 3.0x volume
 2026-11-18,13:40:06,NTPCGREEN,EARLY,82.8,82.45,83.3,3.8,above VWAP; opening-range breakout; fresh EMA bullish cross; volume 1.6x normal; RSI 76 stretched; +1.0% last 30 min; +0.9% in 15 min on 24.4x volume
+2026-11-18,13:50:06,UBL,WATCH,1205.8,1200.75,1213.35,5.4,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
+2026-11-18,13:50:06,DEEPAKFERT,EARLY,1463.4,1451.05,1481.9,3.2,above VWAP; +3.1% from open; opening-range breakout; short-term up; RSI 80 stretched; already extended; +1.7% last 30 min; +1.9% in 15 min on 2.2x volume
