@@ -15,3 +15,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,10:20:04,BIOCON,CONFIRMED,366.65,363.65,371.2,7.4,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 3.2x normal; RSI 78 stretched; +1.8% last 30 min
 2026-11-18,10:30:04,GODREJPROP,CONFIRMED,1896.5,1877.4,1925.15,5.5,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-18,10:35:05,AWL,WATCH,171.4,169.75,173.85,5.7,above VWAP; +2.1% from open; opening-range breakout; short-term up; RSI 78 stretched; +2.1% last 30 min
+2026-11-18,10:40:04,JYOTICNC,WATCH,1047.45,1037.3,1062.65,5.0,above VWAP; +1.4% from open; opening-range breakout; short-term up; +1.0% last 30 min
