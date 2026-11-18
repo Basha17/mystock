@@ -31,3 +31,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,12:10:04,SUNTV,CONFIRMED,677.6,670.95,687.6,7.1,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 5.4x normal; +0.6% last 30 min
 2026-11-18,12:10:04,TRENT,CONFIRMED,3231.2,3207.8,3266.25,6.1,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.7% last 30 min
 2026-11-18,12:20:04,CIPLA,CONFIRMED,1424.7,1413.9,1440.9,6.0,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.3x normal
+2026-11-18,12:30:04,HEXT,EARLY,486.05,483.15,490.4,3.5,above VWAP; fresh EMA bullish cross; +1.0% last 30 min; +0.9% in 15 min on 1.6x volume
