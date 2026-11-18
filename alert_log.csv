@@ -26,3 +26,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,11:30:05,STARHEALTH,WATCH,560.15,556.05,566.35,5.0,above VWAP; +2.3% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-18,11:40:04,EXIDEIND,CONFIRMED,390.0,386.5,395.25,6.1,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 2.0x normal; +0.6% last 30 min
 2026-11-18,11:40:04,IEX,CONFIRMED,116.25,115.45,117.45,5.6,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-18,11:45:04,UPL,CONFIRMED,559.8,552.2,571.15,7.3,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 2.6x normal; +1.6% last 30 min
