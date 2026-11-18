@@ -17,3 +17,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,10:35:05,AWL,WATCH,171.4,169.75,173.85,5.7,above VWAP; +2.1% from open; opening-range breakout; short-term up; RSI 78 stretched; +2.1% last 30 min
 2026-11-18,10:40:04,JYOTICNC,WATCH,1047.45,1037.3,1062.65,5.0,above VWAP; +1.4% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-18,10:45:05,SUNTV,EARLY,677.55,671.55,686.55,5.0,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.0x normal; RSI 83 stretched; already extended; +2.1% last 30 min; +1.7% in 15 min on 14.4x volume
+2026-11-18,10:50:04,IIFL,WATCH,675.25,663.05,693.6,5.3,above VWAP; +2.4% from open; short-term up; volume 17.4x normal; +0.3% last 30 min
