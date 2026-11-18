@@ -33,3 +33,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,12:20:04,CIPLA,CONFIRMED,1424.7,1413.9,1440.9,6.0,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.3x normal
 2026-11-18,12:30:04,HEXT,EARLY,486.05,483.15,490.4,3.5,above VWAP; fresh EMA bullish cross; +1.0% last 30 min; +0.9% in 15 min on 1.6x volume
 2026-11-18,13:15:05,PVRINOX,CONFIRMED,1718.4,1710.6,1730.1,5.3,below VWAP; +2.1% from open; opening-range breakout; fresh EMA bullish cross; volume 2.6x normal; +0.5% last 30 min
+2026-11-18,13:20:06,MTARTECH,WATCH,5886.0,5852.1,5936.85,5.2,above VWAP; +1.6% from open; opening-range breakout; fresh EMA bullish cross
