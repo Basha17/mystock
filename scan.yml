@@ -1,8 +1,9 @@
 name: NSE scanner
 
 # One job per trading day that loops internally every 5 minutes.
-# This avoids GitHub's unreliable "every 5 minutes" schedule: it only needs
-# ONE trigger per day, and a second backup trigger in case the first is late.
+# It only needs ONE trigger per day (plus a backup), instead of GitHub's
+# unreliable "every 5 minutes" schedule.
+# The alert log (alert_log.csv, alert_outcomes.csv) is saved back to the repo.
 
 on:
   schedule:
@@ -16,9 +17,15 @@ on:
       refresh:
         description: 'Run one full watchlist refresh now (true/false)'
         default: 'false'
+      summary:
+        description: 'Score today''s alerts and send the summary now (true/false)'
+        default: 'false'
+
+permissions:
+  contents: write
 
 concurrency:
-  group: ${{ github.event.inputs.test == 'true' && 'scanner-test' || 'scanner' }}
+  group: ${{ (github.event.inputs.test == 'true' && 'scanner-test') || (github.event.inputs.summary == 'true' && 'scanner-summary') || 'scanner' }}
   cancel-in-progress: false
 
 jobs:
@@ -27,6 +34,8 @@ jobs:
     timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -48,11 +57,36 @@ jobs:
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           TEST: ${{ github.event.inputs.test }}
+          SUMMARY: ${{ github.event.inputs.summary }}
           FORCE_REFRESH: ${{ github.event.inputs.refresh == 'true' && '1' || '0' }}
         run: |
-          # Single runs for the test / refresh buttons
+          git config user.name "scanner-bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+
+          # Save the alert log files to the repo so they survive between days
+          save_log() {
+            for f in alert_log.csv alert_outcomes.csv; do
+              [ -f "$f" ] && git add "$f"
+            done
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Update alert log" \
+                && git pull -q --rebase origin "$GITHUB_REF_NAME" \
+                && git push -q origin "HEAD:$GITHUB_REF_NAME" \
+                || { echo "Could not save the log to the repo"; git rebase --abort 2>/dev/null || true; }
+            fi
+          }
+
+          # Manual buttons: summary only
+          if [ "$SUMMARY" = "true" ]; then
+            python alert_bot.py summary
+            save_log
+            exit 0
+          fi
+
+          # Manual buttons: one test message or one refresh
           if [ "$TEST" = "true" ] || [ "$FORCE_REFRESH" = "1" ]; then
             python alert_bot.py
+            save_log
             exit 0
           fi
 
@@ -70,7 +104,13 @@ jobs:
           while [ "$(date +%s)" -lt "$END" ]; do
             START=$(date +%s)
             python alert_bot.py || echo "scan failed, continuing"
+            save_log
             WAIT=$((300 - ($(date +%s) - START)))
             if [ "$WAIT" -gt 0 ]; then sleep "$WAIT"; fi
           done
           echo "Loop finished $(date -u)."
+
+          # Daily summary (short pause so the final candles are available)
+          sleep 150
+          python alert_bot.py summary || echo "summary failed"
+          save_log
