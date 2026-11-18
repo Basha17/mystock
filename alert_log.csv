@@ -8,3 +8,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,10:00:05,WOCKPHARMA,CONFIRMED,2058.8,2035.3,2094.1,6.3,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 2.7x normal; +0.5% last 30 min
 2026-11-18,10:05:04,CRAFTSMAN,CONFIRMED,11353.0,11246.0,11513.5,7.8,above VWAP; +2.1% from open; opening-range breakout; fresh EMA bullish cross; volume 1.8x normal; +1.4% last 30 min
 2026-11-18,10:05:04,MRPL,CONFIRMED,178.85,177.1,181.45,6.7,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.7x normal; RSI 79 stretched; +1.9% last 30 min
+2026-11-18,10:10:04,BIOCON,CONFIRMED,362.75,360.35,366.35,6.7,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 2.1x normal; +1.1% last 30 min
+2026-11-18,10:10:04,KAYNES,WATCH,2919.0,2890.25,2962.1,5.2,above VWAP; +2.1% from open; opening-range breakout; short-term up; +1.2% last 30 min
