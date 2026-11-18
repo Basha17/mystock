@@ -28,3 +28,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,11:40:04,IEX,CONFIRMED,116.25,115.45,117.45,5.6,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-18,11:45:04,UPL,CONFIRMED,559.8,552.2,571.15,7.3,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 2.6x normal; +1.6% last 30 min
 2026-11-18,11:50:05,GAIL,CONFIRMED,190.25,189.2,191.9,6.2,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 3.3x normal
+2026-11-18,12:10:04,SUNTV,CONFIRMED,677.6,670.95,687.6,7.1,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 5.4x normal; +0.6% last 30 min
+2026-11-18,12:10:04,TRENT,CONFIRMED,3231.2,3207.8,3266.25,6.1,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.7% last 30 min
