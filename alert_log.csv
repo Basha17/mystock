@@ -1,2 +1,3 @@
 date,time,stock,kind,entry,stop,target,quick,why
 2026-11-18,09:45:04,URBANCO,EARLY,166.2,163.4,170.35,5.2,above VWAP; +3.6% from open; opening-range breakout; short-term down; volume 3.7x normal; already extended; +1.8% last 30 min; +0.6% in 15 min on 5.2x volume
+2026-11-18,09:50:04,CHENNPETRO,WATCH,1439.8,1426.1,1460.4,5.3,above VWAP; +1.3% from open; opening-range breakout; short-term up; +1.2% last 30 min
