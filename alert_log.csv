@@ -124,3 +124,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,12:55:00,ESCORTS,CONFIRMED,2443.4,2429.8,2463.8,5.2,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-19,13:20:01,IGL,CONFIRMED,152.1,151.2,153.4,5.4,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 2.2x normal
 2026-11-19,13:25:00,KIRLOSENG,EARLY,1713.0,1700.2,1732.25,2.9,above VWAP; +3.1% from open; opening-range breakout; short-term up; RSI 80 stretched; already extended; +1.4% last 30 min; +0.6% in 15 min on 1.6x volume
+2026-11-19,13:30:00,KARURVYSYA,CONFIRMED,387.95,384.85,392.6,5.9,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.6% last 30 min
+2026-11-19,13:30:00,ABBOTINDIA,CONFIRMED,25880.0,25773.3,26040.05,5.5,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.9x normal
+2026-11-19,13:30:00,TATASTEEL,WATCH,180.7,180.0,181.8,5.2,above VWAP; +1.5% from open; opening-range breakout; fresh EMA bullish cross
