@@ -81,3 +81,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,10:45:00,IRFC,CONFIRMED,83.2,82.5,84.2,6.3,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 1.6x normal; +0.9% last 30 min
 2026-11-19,10:45:00,DMART,CONFIRMED,3478.1,3463.5,3499.95,5.8,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 1.7x normal; +0.5% last 30 min
 2026-11-19,10:45:00,TENNIND,CONFIRMED,435.5,432.5,440.0,5.0,above VWAP; opening-range breakout; short-term up; volume 2.2x normal; +0.5% last 30 min
+2026-11-19,10:50:00,PNBHOUSING,CONFIRMED,1151.7,1142.5,1165.45,7.4,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 3.5x normal; +1.2% last 30 min
+2026-11-19,10:50:00,BAJAJ-AUTO,EARLY,10768.0,10682.95,10895.6,4.8,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 76 stretched; already extended; +1.3% last 30 min; +1.1% in 15 min on 2.3x volume
