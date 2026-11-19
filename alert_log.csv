@@ -115,3 +115,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,12:30:01,DELHIVERY,CONFIRMED,455.3,452.3,459.8,6.1,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 3.5x normal
 2026-11-19,12:30:01,IOB,CONFIRMED,31.7,31.5,31.95,5.8,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.8x normal; +0.3% last 30 min
 2026-11-19,12:30:01,USHAMART,WATCH,472.7,469.9,476.9,5.0,above VWAP; +2.7% from open; opening-range breakout; short-term up; +0.8% last 30 min
+2026-11-19,12:35:00,MANAPPURAM,WATCH,282.95,281.15,285.65,5.5,above VWAP; +1.8% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
