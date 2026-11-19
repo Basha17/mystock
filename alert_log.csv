@@ -73,3 +73,7 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,10:35:00,PVRINOX,WATCH,1732.5,1715.6,1757.85,5.1,above VWAP; +1.6% from open; opening-range breakout; short-term up; +1.1% last 30 min
 2026-11-19,10:35:00,BRITANNIA,CONFIRMED,4760.0,4726.5,4810.25,5.1,above VWAP; opening-range breakout; short-term up; volume 2.3x normal; +0.5% last 30 min
 2026-11-19,10:35:00,HEROMOTOCO,EARLY,5441.5,5389.35,5519.7,5.1,above VWAP; +3.4% from open; opening-range breakout; short-term up; volume 4.2x normal; already extended; +0.6% last 30 min; +0.9% in 15 min on 4.0x volume
+2026-11-19,10:40:00,POLYCAB,CONFIRMED,7391.0,7328.55,7484.7,6.7,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 3.2x normal; +0.6% last 30 min
+2026-11-19,10:40:00,ICICIGI,CONFIRMED,1671.8,1659.05,1690.95,6.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 2.6x normal; +0.5% last 30 min
+2026-11-19,10:40:00,PFOCUS,WATCH,281.15,277.4,286.75,6.0,above VWAP; +2.2% from open; opening-range breakout; short-term up; +2.5% last 30 min
+2026-11-19,10:40:00,PHOENIXLTD,CONFIRMED,2237.6,2220.6,2263.1,5.9,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 2.1x normal; +0.4% last 30 min
