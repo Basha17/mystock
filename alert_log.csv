@@ -62,3 +62,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,10:00:00,MAHABANK,WATCH,97.65,96.9,98.75,5.1,above VWAP; +1.8% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-19,10:10:00,HAVELLS,CONFIRMED,1165.5,1155.85,1180.0,6.6,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 78 stretched; +1.1% last 30 min
 2026-11-19,10:20:01,IDFCFIRSTB,EARLY,85.7,84.95,86.9,4.8,above VWAP; +3.8% from open; opening-range breakout; short-term up; volume 3.8x normal; RSI 81 stretched; already extended; +0.9% last 30 min; +0.8% in 15 min on 3.4x volume
+2026-11-19,10:25:00,MOTHERSON,EARLY,162.95,161.3,165.35,4.4,above VWAP; +4.0% from open; opening-range breakout; short-term up; volume 2.1x normal; RSI 86 stretched; already extended; +1.4% last 30 min; +1.5% in 15 min on 3.4x volume
