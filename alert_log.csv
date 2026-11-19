@@ -119,3 +119,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,12:40:00,CONCOR,CONFIRMED,441.0,438.5,444.75,6.3,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 3.6x normal
 2026-11-19,12:40:00,BRITANNIA,EARLY,4869.9,4834.15,4923.5,4.9,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 2.8x normal; RSI 83 stretched; already extended; +1.5% last 30 min; +1.1% in 15 min on 5.8x volume
 2026-11-19,12:40:00,NESTLEIND,EARLY,1311.6,1304.1,1322.85,4.4,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.1x normal; already extended; +0.9% last 30 min; +0.7% in 15 min on 3.5x volume
+2026-11-19,12:45:01,J&KBANK,CONFIRMED,144.4,143.2,146.15,6.8,above VWAP; +2.9% from open; opening-range breakout; fresh EMA bullish cross; volume 2.4x normal
