@@ -111,3 +111,7 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,11:55:01,UBL,EARLY,1240.6,1232.9,1252.1,2.8,above VWAP; +2.1% from open; opening-range breakout; short-term up; RSI 79 stretched; already extended; +1.2% last 30 min; +0.7% in 15 min on 2.2x volume
 2026-11-19,12:00:00,WOCKPHARMA,EARLY,2101.7,2079.8,2134.55,4.2,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 1.9x normal; RSI 78 stretched; already extended; +1.2% last 30 min; +0.6% in 15 min on 11.6x volume
 2026-11-19,12:10:00,MINDACORP,CONFIRMED,730.3,724.95,738.3,5.2,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.8x normal
+2026-11-19,12:30:01,EMAMILTD,CONFIRMED,420.85,417.9,425.25,6.3,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 1.7x normal; +1.0% last 30 min
+2026-11-19,12:30:01,DELHIVERY,CONFIRMED,455.3,452.3,459.8,6.1,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 3.5x normal
+2026-11-19,12:30:01,IOB,CONFIRMED,31.7,31.5,31.95,5.8,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.8x normal; +0.3% last 30 min
+2026-11-19,12:30:01,USHAMART,WATCH,472.7,469.9,476.9,5.0,above VWAP; +2.7% from open; opening-range breakout; short-term up; +0.8% last 30 min
