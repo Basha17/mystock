@@ -90,3 +90,8 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,11:15:00,IEX,WATCH,117.85,116.95,119.2,5.0,above VWAP; +3.0% from open; opening-range breakout; short-term up; +0.8% last 30 min
 2026-11-19,11:20:00,SUNTV,WATCH,701.35,689.75,718.75,5.1,above VWAP; +1.5% from open; short-term up; volume 3.6x normal; +0.3% last 30 min
 2026-11-19,11:25:00,IEX,EARLY,118.6,117.55,120.1,4.5,above VWAP; +3.6% from open; opening-range breakout; short-term up; volume 1.7x normal; already extended; +1.1% last 30 min; +0.8% in 15 min on 4.3x volume
+2026-11-19,11:30:00,NAUKRI,CONFIRMED,1164.8,1155.35,1179.0,7.0,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 4.0x normal; +0.5% last 30 min
+2026-11-19,11:30:00,AIAENG,CONFIRMED,3339.6,3321.45,3366.8,5.6,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.3% last 30 min
+2026-11-19,11:30:00,WOCKPHARMA,WATCH,2077.0,2057.9,2105.65,5.4,above VWAP; +2.0% from open; opening-range breakout; short-term up; +1.2% last 30 min
+2026-11-19,11:30:00,UNOMINDA,CONFIRMED,1402.0,1392.75,1415.85,5.3,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.8x normal
+2026-11-19,11:30:00,ONESOURCE,WATCH,1597.9,1587.4,1613.7,5.1,above VWAP; +1.1% from open; opening-range breakout; short-term up; +1.1% last 30 min
