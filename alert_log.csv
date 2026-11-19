@@ -105,3 +105,7 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,11:45:00,ASAHIINDIA,CONFIRMED,1186.2,1177.6,1199.1,5.7,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.5% last 30 min
 2026-11-19,11:45:00,PNBHOUSING,EARLY,1156.5,1148.1,1169.05,5.0,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 3.4x normal; already extended; +0.8% last 30 min; +0.8% in 15 min on 3.2x volume
 2026-11-19,11:50:01,ONESOURCE,EARLY,1611.8,1599.2,1630.7,3.1,above VWAP; +1.9% from open; opening-range breakout; short-term up; RSI 83 stretched; already extended; +1.6% last 30 min; +1.0% in 15 min on 2.1x volume
+2026-11-19,11:55:01,FORCEMOT,CONFIRMED,20442.0,20262.0,20712.0,6.3,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 3.0x normal
+2026-11-19,11:55:01,LGEINDIA,CONFIRMED,1707.9,1698.35,1722.25,6.2,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 3.3x normal
+2026-11-19,11:55:01,WHIRLPOOL,EARLY,837.6,831.5,846.8,4.3,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 1.7x normal; already extended; +0.9% last 30 min; +0.7% in 15 min on 2.9x volume
+2026-11-19,11:55:01,UBL,EARLY,1240.6,1232.9,1252.1,2.8,above VWAP; +2.1% from open; opening-range breakout; short-term up; RSI 79 stretched; already extended; +1.2% last 30 min; +0.7% in 15 min on 2.2x volume
