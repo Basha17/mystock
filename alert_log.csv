@@ -88,3 +88,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,11:10:01,CENTRALBK,CONFIRMED,33.3,32.95,33.9,6.3,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.4x normal
 2026-11-19,11:10:01,FSL,CONFIRMED,278.3,275.65,282.3,6.3,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.5x normal; +0.6% last 30 min
 2026-11-19,11:15:00,IEX,WATCH,117.85,116.95,119.2,5.0,above VWAP; +3.0% from open; opening-range breakout; short-term up; +0.8% last 30 min
+2026-11-19,11:20:00,SUNTV,WATCH,701.35,689.75,718.75,5.1,above VWAP; +1.5% from open; short-term up; volume 3.6x normal; +0.3% last 30 min
