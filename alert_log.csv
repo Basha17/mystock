@@ -60,3 +60,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,09:55:00,DABUR,EARLY,390.5,387.15,395.55,5.6,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 3.5x normal; RSI 80 stretched; already extended; +1.8% last 30 min; +1.0% in 15 min on 7.0x volume
 2026-11-19,10:00:00,HINDUNILVR,CONFIRMED,2028.2,2014.3,2049.05,6.0,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 2.6x normal; RSI 78 stretched; +0.7% last 30 min
 2026-11-19,10:00:00,MAHABANK,WATCH,97.65,96.9,98.75,5.1,above VWAP; +1.8% from open; opening-range breakout; short-term up; +1.0% last 30 min
+2026-11-19,10:10:00,HAVELLS,CONFIRMED,1165.5,1155.85,1180.0,6.6,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 78 stretched; +1.1% last 30 min
