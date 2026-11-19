@@ -127,3 +127,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,13:30:00,KARURVYSYA,CONFIRMED,387.95,384.85,392.6,5.9,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.6% last 30 min
 2026-11-19,13:30:00,ABBOTINDIA,CONFIRMED,25880.0,25773.3,26040.05,5.5,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.9x normal
 2026-11-19,13:30:00,TATASTEEL,WATCH,180.7,180.0,181.8,5.2,above VWAP; +1.5% from open; opening-range breakout; fresh EMA bullish cross
+2026-11-19,13:35:00,NLCINDIA,CONFIRMED,230.35,228.75,232.8,7.3,above VWAP; +1.0% from open; opening-range breakout; fresh EMA bullish cross; volume 2.5x normal; +0.6% last 30 min
