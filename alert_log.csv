@@ -63,3 +63,13 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,10:10:00,HAVELLS,CONFIRMED,1165.5,1155.85,1180.0,6.6,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 78 stretched; +1.1% last 30 min
 2026-11-19,10:20:01,IDFCFIRSTB,EARLY,85.7,84.95,86.9,4.8,above VWAP; +3.8% from open; opening-range breakout; short-term up; volume 3.8x normal; RSI 81 stretched; already extended; +0.9% last 30 min; +0.8% in 15 min on 3.4x volume
 2026-11-19,10:25:00,MOTHERSON,EARLY,162.95,161.3,165.35,4.4,above VWAP; +4.0% from open; opening-range breakout; short-term up; volume 2.1x normal; RSI 86 stretched; already extended; +1.4% last 30 min; +1.5% in 15 min on 3.4x volume
+2026-11-19,10:35:00,BHARATFORG,CONFIRMED,1710.4,1693.65,1735.5,7.1,above VWAP; +1.3% from open; opening-range breakout; short-term up; volume 4.3x normal; +0.6% last 30 min
+2026-11-19,10:35:00,ICICILIFE,CONFIRMED,453.2,449.3,459.05,6.9,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 4.3x normal; RSI 78 stretched; +0.9% last 30 min
+2026-11-19,10:35:00,PNBHOUSING,CONFIRMED,1149.0,1141.9,1159.65,6.4,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 2.8x normal; RSI 77 stretched; +1.0% last 30 min
+2026-11-19,10:35:00,HINDALCO,CONFIRMED,903.5,895.45,915.55,5.9,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.4% last 30 min
+2026-11-19,10:35:00,BEL,CONFIRMED,401.4,399.2,404.7,5.8,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.4x normal
+2026-11-19,10:35:00,GRASIM,CONFIRMED,3085.0,3066.1,3113.4,5.8,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.6% last 30 min
+2026-11-19,10:35:00,IOC,CONFIRMED,146.1,145.3,147.25,5.3,above VWAP; +1.3% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-19,10:35:00,PVRINOX,WATCH,1732.5,1715.6,1757.85,5.1,above VWAP; +1.6% from open; opening-range breakout; short-term up; +1.1% last 30 min
+2026-11-19,10:35:00,BRITANNIA,CONFIRMED,4760.0,4726.5,4810.25,5.1,above VWAP; opening-range breakout; short-term up; volume 2.3x normal; +0.5% last 30 min
+2026-11-19,10:35:00,HEROMOTOCO,EARLY,5441.5,5389.35,5519.7,5.1,above VWAP; +3.4% from open; opening-range breakout; short-term up; volume 4.2x normal; already extended; +0.6% last 30 min; +0.9% in 15 min on 4.0x volume
