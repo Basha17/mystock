@@ -110,3 +110,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,11:55:01,WHIRLPOOL,EARLY,837.6,831.5,846.8,4.3,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 1.7x normal; already extended; +0.9% last 30 min; +0.7% in 15 min on 2.9x volume
 2026-11-19,11:55:01,UBL,EARLY,1240.6,1232.9,1252.1,2.8,above VWAP; +2.1% from open; opening-range breakout; short-term up; RSI 79 stretched; already extended; +1.2% last 30 min; +0.7% in 15 min on 2.2x volume
 2026-11-19,12:00:00,WOCKPHARMA,EARLY,2101.7,2079.8,2134.55,4.2,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 1.9x normal; RSI 78 stretched; already extended; +1.2% last 30 min; +0.6% in 15 min on 11.6x volume
+2026-11-19,12:10:00,MINDACORP,CONFIRMED,730.3,724.95,738.3,5.2,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.8x normal
