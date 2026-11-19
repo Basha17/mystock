@@ -131,3 +131,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,13:40:01,FLUOROCHEM,CONFIRMED,4915.0,4880.25,4967.1,7.3,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 3.2x normal; +1.2% last 30 min
 2026-11-19,13:40:01,VTL,CONFIRMED,533.25,530.65,537.15,5.6,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-19,13:50:00,JAINREC,CONFIRMED,290.5,288.65,293.3,6.7,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 4.3x normal
+2026-11-19,14:05:00,BANKBARODA,EARLY,283.5,282.2,285.45,3.8,above VWAP; +3.4% from open; opening-range breakout; short-term up; volume 2.2x normal; RSI 75 stretched; already extended; +0.7% last 30 min; +0.7% in 15 min on 9.1x volume
