@@ -84,3 +84,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-19,10:50:00,PNBHOUSING,CONFIRMED,1151.7,1142.5,1165.45,7.4,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 3.5x normal; +1.2% last 30 min
 2026-11-19,10:50:00,BAJAJ-AUTO,EARLY,10768.0,10682.95,10895.6,4.8,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 76 stretched; already extended; +1.3% last 30 min; +1.1% in 15 min on 2.3x volume
 2026-11-19,10:55:00,SWIGGY,CONFIRMED,182.25,180.25,185.15,5.8,above VWAP; +1.3% from open; opening-range breakout; short-term up; volume 2.1x normal
+2026-11-19,11:05:00,WHIRLPOOL,CONFIRMED,828.55,822.45,837.75,5.4,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.6x normal
