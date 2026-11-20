@@ -228,3 +228,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,12:43:38,PAGEIND,CONFIRMED,31115.0,30946.75,31367.35,5.3,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-20,12:43:38,HDFCBANK,EARLY,842.6,837.75,849.9,4.3,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 2.9x normal; RSI 79 stretched; already extended; +0.9% last 30 min; +0.8% in 15 min on 3.4x volume
 2026-11-20,12:48:39,PRESTIGE,CONFIRMED,1675.9,1663.9,1693.9,6.6,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 3.3x normal; +0.4% last 30 min
+2026-11-20,12:53:38,RUBICON,EARLY,1749.7,1734.55,1772.4,4.8,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 3.9x normal; RSI 83 stretched; already extended; +0.9% last 30 min; +1.1% in 15 min on 8.0x volume
