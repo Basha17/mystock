@@ -215,3 +215,9 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,12:08:39,GVT&D,EARLY,4317.5,4280.7,4372.7,2.6,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 1.8x normal; already extended; +1.2% last 30 min; +1.1% in 15 min on 2.0x volume
 2026-11-20,12:18:39,SCHNEIDER,EARLY,1040.8,1031.5,1054.8,4.7,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 3.1x normal; already extended; +0.7% last 30 min; +0.8% in 15 min on 19.9x volume
 2026-11-20,12:23:38,NYKAA,CONFIRMED,364.75,362.65,367.9,5.2,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.5x normal
+2026-11-20,12:33:39,KFINTECH,WATCH,939.3,931.65,950.75,5.6,above VWAP; +1.8% from open; opening-range breakout; fresh EMA bullish cross; +0.6% last 30 min
+2026-11-20,12:33:39,ATHERENERG,WATCH,1959.5,1946.35,1979.2,5.5,above VWAP; +2.1% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
+2026-11-20,12:33:39,LICI,CONFIRMED,412.8,410.5,416.2,5.4,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.5x normal
+2026-11-20,12:33:39,ICICIBANK,CONFIRMED,1631.6,1623.9,1643.1,5.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 1.5x normal
+2026-11-20,12:33:39,CDSL,WATCH,1429.6,1420.65,1443.05,5.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; +1.1% last 30 min
+2026-11-20,12:33:39,ULTRACEMCO,WATCH,12761.0,12704.5,12845.7,5.1,above VWAP; +1.4% from open; short-term up; volume 3.4x normal; +0.4% last 30 min
