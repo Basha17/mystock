@@ -224,3 +224,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,12:38:39,BAJAJFINSV,CONFIRMED,1910.7,1896.55,1931.9,5.9,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.7x normal; RSI 79 stretched; +1.1% last 30 min
 2026-11-20,12:38:39,BANDHANBNK,CONFIRMED,176.65,175.45,178.45,5.9,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 2.2x normal; +0.3% last 30 min
 2026-11-20,12:38:39,IDFCFIRSTB,WATCH,86.9,86.35,87.75,5.0,above VWAP; +1.8% from open; opening-range breakout; short-term up; +0.8% last 30 min
+2026-11-20,12:43:38,SHREECEM,CONFIRMED,25405.0,25270.9,25606.15,6.7,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 12.7x normal
+2026-11-20,12:43:38,PAGEIND,CONFIRMED,31115.0,30946.75,31367.35,5.3,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-20,12:43:38,HDFCBANK,EARLY,842.6,837.75,849.9,4.3,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 2.9x normal; RSI 79 stretched; already extended; +0.9% last 30 min; +0.8% in 15 min on 3.4x volume
