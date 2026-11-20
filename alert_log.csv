@@ -161,3 +161,11 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,10:18:38,HEXT,CONFIRMED,491.85,486.65,499.65,6.8,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 6.4x normal; +0.3% last 30 min
 2026-11-20,10:18:38,TCS,EARLY,2395.7,2372.0,2431.25,4.5,above VWAP; +3.4% from open; opening-range breakout; short-term up; volume 2.4x normal; already extended; +0.8% last 30 min; +0.6% in 15 min on 2.1x volume
 2026-11-20,10:28:38,INFY,EARLY,1117.5,1106.45,1134.05,4.3,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 80 stretched; already extended; +0.8% last 30 min; +0.7% in 15 min on 2.1x volume
+2026-11-20,10:33:38,PNBHOUSING,CONFIRMED,1172.6,1160.9,1190.15,6.1,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.6x normal; +0.8% last 30 min
+2026-11-20,10:33:38,CCL,WATCH,950.0,942.85,960.7,5.7,above VWAP; opening-range breakout; short-term down; volume 9.9x normal; +1.2% last 30 min
+2026-11-20,10:33:38,SANSERA,WATCH,4777.9,4727.85,4853.0,5.7,above VWAP; +2.4% from open; opening-range breakout; short-term up; +1.7% last 30 min
+2026-11-20,10:33:38,WAAREEENER,WATCH,2435.6,2415.0,2466.5,5.5,above VWAP; +1.0% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
+2026-11-20,10:33:38,PWL,WATCH,137.95,135.75,141.25,5.3,above VWAP; fresh EMA bullish cross; volume 1.8x normal; +1.4% last 30 min
+2026-11-20,10:33:38,UNIONBANK,WATCH,212.1,210.45,214.55,5.2,above VWAP; +1.5% from open; opening-range breakout; short-term up; +1.2% last 30 min
+2026-11-20,10:33:38,AIAENG,WATCH,3351.0,3332.0,3379.5,5.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; +1.1% last 30 min
+2026-11-20,10:33:38,CYIENT,EARLY,1147.8,1132.25,1171.1,5.9,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 3.8x normal; RSI 82 stretched; already extended; +2.3% last 30 min; +0.8% in 15 min on 9.1x volume
