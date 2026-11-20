@@ -241,3 +241,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,13:43:38,ABBOTINDIA,CONFIRMED,26520.0,26385.75,26721.35,5.2,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-20,13:43:38,ABCAPITAL,CONFIRMED,421.0,419.05,423.95,5.0,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-20,13:43:38,IOB,EARLY,31.95,31.7,32.35,2.8,above VWAP; +2.4% from open; opening-range breakout; short-term up; RSI 80 stretched; already extended; +1.2% last 30 min; +1.0% in 15 min on 5.3x volume
+2026-11-20,14:43:38,IOB,CONFIRMED,32.15,31.75,32.65,6.1,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 3.0x normal
