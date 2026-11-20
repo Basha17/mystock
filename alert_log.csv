@@ -155,3 +155,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,09:58:39,EIHOTEL,WATCH,316.7,313.5,321.5,5.0,above VWAP; +2.5% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-20,09:58:39,TECHM,EARLY,1768.8,1750.0,1797.05,4.8,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 4.7x normal; RSI 76 stretched; already extended; +0.8% last 30 min; +1.0% in 15 min on 2.1x volume
 2026-11-20,09:58:39,APOLLOHOSP,EARLY,9097.0,9014.3,9221.05,5.1,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 4.4x normal; RSI 88 stretched; already extended; +1.1% last 30 min; +0.6% in 15 min on 3.3x volume
+2026-11-20,10:03:38,BAJAJHLDNG,EARLY,11617.0,11508.5,11779.75,4.7,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 5.5x normal; RSI 81 stretched; already extended; +0.7% last 30 min; +0.9% in 15 min on 5.8x volume
