@@ -213,3 +213,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,12:08:39,APOLLOTYRE,CONFIRMED,421.1,419.1,424.1,5.6,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.8x normal
 2026-11-20,12:08:39,COHANCE,CONFIRMED,461.85,458.6,466.75,5.4,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 2.1x normal
 2026-11-20,12:08:39,GVT&D,EARLY,4317.5,4280.7,4372.7,2.6,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 1.8x normal; already extended; +1.2% last 30 min; +1.1% in 15 min on 2.0x volume
+2026-11-20,12:18:39,SCHNEIDER,EARLY,1040.8,1031.5,1054.8,4.7,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 3.1x normal; already extended; +0.7% last 30 min; +0.8% in 15 min on 19.9x volume
