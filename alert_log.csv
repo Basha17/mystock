@@ -221,3 +221,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,12:33:39,ICICIBANK,CONFIRMED,1631.6,1623.9,1643.1,5.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-20,12:33:39,CDSL,WATCH,1429.6,1420.65,1443.05,5.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; +1.1% last 30 min
 2026-11-20,12:33:39,ULTRACEMCO,WATCH,12761.0,12704.5,12845.7,5.1,above VWAP; +1.4% from open; short-term up; volume 3.4x normal; +0.4% last 30 min
+2026-11-20,12:38:39,BAJAJFINSV,CONFIRMED,1910.7,1896.55,1931.9,5.9,above VWAP; +2.3% from open; opening-range breakout; short-term up; volume 1.7x normal; RSI 79 stretched; +1.1% last 30 min
+2026-11-20,12:38:39,BANDHANBNK,CONFIRMED,176.65,175.45,178.45,5.9,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 2.2x normal; +0.3% last 30 min
+2026-11-20,12:38:39,IDFCFIRSTB,WATCH,86.9,86.35,87.75,5.0,above VWAP; +1.8% from open; opening-range breakout; short-term up; +0.8% last 30 min
