@@ -208,3 +208,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-20,11:53:39,GRANULES,CONFIRMED,817.0,811.85,824.7,5.5,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 1.9x normal
 2026-11-20,11:53:39,CAMS,CONFIRMED,726.05,719.3,736.15,5.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.7x normal
 2026-11-20,11:53:39,KIMS,EARLY,794.7,785.45,808.6,5.5,above VWAP; +3.8% from open; opening-range breakout; short-term up; volume 2.7x normal; already extended; +1.7% last 30 min; +0.8% in 15 min on 5.7x volume
+2026-11-20,11:58:38,AXISBANK,EARLY,1417.9,1408.2,1432.45,4.6,above VWAP; +3.6% from open; opening-range breakout; short-term up; volume 2.5x normal; RSI 82 stretched; already extended; +1.3% last 30 min; +0.9% in 15 min on 5.6x volume
