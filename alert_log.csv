@@ -286,3 +286,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,12:52:57,HONASA,WATCH,535.65,533.2,539.3,5.2,above VWAP; +1.8% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-23,13:32:58,PWL,WATCH,139.8,138.25,142.05,5.4,above VWAP; +3.0% from open; opening-range breakout; short-term up; +1.4% last 30 min
 2026-11-23,13:32:58,HCLTECH,WATCH,1368.3,1359.85,1381.0,5.1,above VWAP; opening-range breakout; fresh EMA bullish cross; +1.0% last 30 min
+2026-11-23,13:37:58,LGEINDIA,CONFIRMED,1781.4,1768.75,1800.4,5.9,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 3.0x normal
