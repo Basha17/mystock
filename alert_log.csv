@@ -250,3 +250,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,11:07:58,TORNTPHARM,CONFIRMED,4777.0,4749.45,4818.35,6.0,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal; +0.4% last 30 min
 2026-11-23,11:07:58,JYOTICNC,CONFIRMED,1068.7,1057.5,1085.5,5.8,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.3% last 30 min
 2026-11-23,11:07:58,PERSISTENT,CONFIRMED,6258.0,6207.45,6333.8,5.8,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 2.0x normal
+2026-11-23,11:12:57,TEJASNET,CONFIRMED,407.9,403.05,415.15,6.3,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 3.4x normal
+2026-11-23,11:12:57,WELSPUNLIV,CONFIRMED,272.45,268.25,278.8,6.1,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.8x normal; +0.7% last 30 min
+2026-11-23,11:12:57,ACMESOLAR,EARLY,419.45,414.55,426.8,5.1,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 3.3x normal; already extended; +1.0% last 30 min; +1.0% in 15 min on 8.1x volume
