@@ -262,3 +262,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,11:22:57,DIXON,CONFIRMED,13420.0,13313.65,13579.55,5.9,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.4% last 30 min
 2026-11-23,11:22:57,TECHM,CONFIRMED,1799.4,1784.75,1821.35,5.8,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 2.6x normal
 2026-11-23,11:22:57,PVRINOX,CONFIRMED,1714.2,1696.8,1740.3,5.1,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-23,11:27:58,VMM,CONFIRMED,94.7,93.8,96.0,7.0,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 4.1x normal; +0.5% last 30 min
+2026-11-23,11:27:58,INTELLECT,EARLY,568.2,560.95,579.05,3.7,above VWAP; +3.1% from open; short-term up; volume 3.4x normal; already extended; +1.0% last 30 min; +0.8% in 15 min on 2.0x volume
