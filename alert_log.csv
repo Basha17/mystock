@@ -259,3 +259,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,11:17:58,MPHASIS,CONFIRMED,2477.4,2456.5,2508.75,5.8,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.7x normal; +0.4% last 30 min
 2026-11-23,11:17:58,INTELLECT,WATCH,565.35,558.35,575.85,5.2,above VWAP; +2.6% from open; short-term up; volume 3.5x normal; +0.4% last 30 min
 2026-11-23,11:17:58,ZEEL,CONFIRMED,71.95,71.35,72.9,5.0,above VWAP; opening-range breakout; short-term up; volume 1.7x normal; +0.7% last 30 min
+2026-11-23,11:22:57,DIXON,CONFIRMED,13420.0,13313.65,13579.55,5.9,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.4% last 30 min
+2026-11-23,11:22:57,TECHM,CONFIRMED,1799.4,1784.75,1821.35,5.8,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 2.6x normal
+2026-11-23,11:22:57,PVRINOX,CONFIRMED,1714.2,1696.8,1740.3,5.1,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 1.6x normal
