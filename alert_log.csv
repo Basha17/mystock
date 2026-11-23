@@ -290,3 +290,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,13:42:58,SCHAEFFLER,CONFIRMED,3651.8,3631.7,3681.95,6.5,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 3.2x normal; +0.4% last 30 min
 2026-11-23,13:47:57,ATHERENERG,WATCH,1966.9,1957.75,1980.6,5.5,above VWAP; +1.4% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
 2026-11-23,13:47:57,ITC,CONFIRMED,302.05,300.4,304.5,5.0,above VWAP; opening-range breakout; short-term up; volume 1.6x normal; +0.6% last 30 min
+2026-11-23,13:52:57,KPITTECH,CONFIRMED,532.35,529.0,537.35,5.8,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal
+2026-11-23,13:52:57,NAVINFLUOR,WATCH,10270.0,10195.5,10381.8,5.0,above VWAP; +1.2% from open; opening-range breakout; short-term up; +1.0% last 30 min
+2026-11-23,13:52:57,LGEINDIA,EARLY,1796.8,1783.0,1817.5,4.8,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 2.9x normal; already extended; +0.8% last 30 min; +0.9% in 15 min on 1.5x volume
