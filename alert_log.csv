@@ -271,3 +271,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,11:32:58,SIEMENS,WATCH,3625.6,3597.85,3667.25,5.0,above VWAP; opening-range breakout; fresh EMA bullish cross; +0.8% last 30 min
 2026-11-23,11:32:58,EIHOTEL,EARLY,333.3,328.3,340.85,3.8,above VWAP; short-term down; volume 3.3x normal; +1.1% last 30 min; +1.7% in 15 min on 7.3x volume
 2026-11-23,11:32:58,VMM,EARLY,95.3,94.3,96.7,5.5,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 4.3x normal; already extended; +1.0% last 30 min; +0.9% in 15 min on 4.5x volume
+2026-11-23,11:37:57,COFORGE,WATCH,2148.5,2129.75,2176.65,5.0,above VWAP; +1.9% from open; opening-range breakout; short-term up; +0.9% last 30 min
+2026-11-23,11:37:57,LINDEINDIA,EARLY,6719.5,6667.25,6797.85,4.7,above VWAP; +1.4% from open; opening-range breakout; fresh EMA bullish cross; RSI 81 stretched; already extended; +2.2% last 30 min; +1.9% in 15 min on 7.8x volume
