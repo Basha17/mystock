@@ -298,3 +298,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,14:27:59,DABUR,CONFIRMED,402.0,399.5,405.75,7.2,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 3.9x normal; +0.8% last 30 min
 2026-11-23,14:32:59,UNITDSPR,CONFIRMED,1486.5,1478.1,1499.1,5.6,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.3% last 30 min
 2026-11-23,14:32:59,ACE,WATCH,1188.0,1180.6,1199.1,5.6,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
+2026-11-23,14:42:59,HONASA,EARLY,539.35,537.55,542.1,2.3,above VWAP; +2.5% from open; opening-range breakout; short-term up; RSI 78 stretched; already extended; +0.6% last 30 min; +0.7% in 15 min on 1.8x volume
