@@ -293,3 +293,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-23,13:52:57,KPITTECH,CONFIRMED,532.35,529.0,537.35,5.8,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal
 2026-11-23,13:52:57,NAVINFLUOR,WATCH,10270.0,10195.5,10381.8,5.0,above VWAP; +1.2% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-23,13:52:57,LGEINDIA,EARLY,1796.8,1783.0,1817.5,4.8,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 2.9x normal; already extended; +0.8% last 30 min; +0.9% in 15 min on 1.5x volume
+2026-11-23,14:12:58,PTCIL,CONFIRMED,24405.0,24212.75,24693.4,5.2,above VWAP; opening-range breakout; short-term up; volume 2.9x normal
