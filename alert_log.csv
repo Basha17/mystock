@@ -355,3 +355,9 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,11:04:43,BAJAJFINSV,EARLY,1944.0,1928.85,1966.75,4.6,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.5x normal; RSI 80 stretched; already extended; +0.9% last 30 min; +0.9% in 15 min on 4.3x volume
 2026-11-25,11:24:43,SBILIFE,CONFIRMED,1847.8,1836.15,1865.3,6.6,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 4.3x normal
 2026-11-25,11:29:42,BEML,EARLY,2062.0,2045.9,2086.15,4.0,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.9x normal; RSI 78 stretched; already extended; +1.0% last 30 min; +0.9% in 15 min on 2.2x volume
+2026-11-25,11:34:42,DMART,CONFIRMED,3517.4,3487.1,3562.9,6.3,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 2.8x normal; RSI 76 stretched; +0.9% last 30 min
+2026-11-25,11:34:42,TORNTPHARM,CONFIRMED,4866.4,4835.8,4912.3,6.0,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 2.3x normal; +0.4% last 30 min
+2026-11-25,11:34:42,JMFINANCIL,CONFIRMED,111.9,111.0,113.25,5.7,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal
+2026-11-25,11:34:42,ETERNAL,CONFIRMED,372.9,370.35,376.7,5.4,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.9x normal
+2026-11-25,11:34:42,NHPC,CONFIRMED,76.7,76.25,77.35,5.4,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.8x normal
+2026-11-25,11:34:42,OBEROIRLTY,WATCH,1885.9,1870.7,1908.7,5.2,above VWAP; +1.4% from open; opening-range breakout; short-term up; +1.0% last 30 min
