@@ -324,3 +324,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,10:19:43,TATACONSUM,CONFIRMED,1175.9,1164.8,1192.55,7.0,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 4.9x normal; +0.5% last 30 min
 2026-11-25,10:19:43,DABUR,EARLY,414.3,409.05,422.15,4.8,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 2.8x normal; already extended; +0.9% last 30 min; +1.2% in 15 min on 3.1x volume
 2026-11-25,10:19:43,ICICILIFE,EARLY,489.8,483.85,498.7,3.8,above VWAP; +3.7% from open; opening-range breakout; short-term up; volume 2.6x normal; RSI 78 stretched; already extended; +0.5% last 30 min; +0.7% in 15 min on 5.3x volume
+2026-11-25,10:29:42,JSWINFRA,CONFIRMED,357.9,354.2,363.45,7.9,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 2.8x normal; +2.0% last 30 min
+2026-11-25,10:29:42,BAJAJFINSV,CONFIRMED,1921.8,1908.75,1941.4,6.0,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 3.3x normal
+2026-11-25,10:29:42,IKS,EARLY,1674.9,1659.6,1697.85,4.3,above VWAP; +3.8% from open; opening-range breakout; short-term up; volume 2.2x normal; RSI 79 stretched; already extended; +1.2% last 30 min; +1.4% in 15 min on 4.1x volume
