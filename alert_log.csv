@@ -388,3 +388,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,13:34:43,INDIGO,CONFIRMED,5736.6,5701.25,5789.6,5.4,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.8x normal
 2026-11-25,13:34:43,INOXINDIA,WATCH,2120.4,2112.1,2132.8,5.2,above VWAP; +1.4% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-25,13:39:42,TIMKEN,WATCH,3097.8,3077.8,3127.8,5.1,above VWAP; opening-range breakout; fresh EMA bullish cross; +1.1% last 30 min
+2026-11-25,13:49:42,ITC,CONFIRMED,310.0,308.2,312.7,7.7,above VWAP; +3.0% from open; opening-range breakout; fresh EMA bullish cross; volume 3.2x normal; +0.6% last 30 min
+2026-11-25,13:49:42,TATACAP,CONFIRMED,353.45,351.2,356.85,7.2,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 4.9x normal; +0.7% last 30 min
