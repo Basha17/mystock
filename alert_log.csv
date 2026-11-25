@@ -311,3 +311,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,09:59:43,ITC,CONFIRMED,306.5,304.15,310.05,6.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 2.7x normal; +0.5% last 30 min
 2026-11-25,09:59:43,AUBANK,CONFIRMED,1008.5,997.4,1025.15,6.1,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 2.4x normal; +0.4% last 30 min
 2026-11-25,10:04:42,CIPLA,CONFIRMED,1425.0,1414.75,1440.4,5.4,above VWAP; opening-range breakout; short-term up; volume 3.4x normal; RSI 79 stretched; +0.7% last 30 min
+2026-11-25,10:09:42,TATACONSUM,CONFIRMED,1174.0,1162.4,1191.4,6.9,above VWAP; +1.3% from open; opening-range breakout; short-term up; volume 5.2x normal; +0.4% last 30 min
+2026-11-25,10:09:42,HINDUNILVR,CONFIRMED,2071.0,2048.15,2105.3,6.7,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 2.3x normal; +1.1% last 30 min
+2026-11-25,10:09:42,JSWINFRA,EARLY,353.6,350.15,358.75,2.3,above VWAP; fresh EMA bullish cross; volume 1.9x normal; +0.4% last 30 min; +0.7% in 15 min on 2.0x volume
