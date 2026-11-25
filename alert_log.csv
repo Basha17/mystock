@@ -371,3 +371,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,11:44:43,ETERNAL,EARLY,375.2,372.55,379.15,4.0,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.9x normal; already extended; +0.5% last 30 min; +0.6% in 15 min on 2.6x volume
 2026-11-25,11:49:42,AETHER,CONFIRMED,1665.3,1646.3,1693.8,5.6,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.4% last 30 min
 2026-11-25,11:49:42,DMART,EARLY,3545.9,3512.7,3595.7,4.9,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 3.0x normal; RSI 80 stretched; already extended; +1.4% last 30 min; +0.8% in 15 min on 4.9x volume
+2026-11-25,11:54:42,GRAVITA,CONFIRMED,1486.4,1467.9,1514.15,5.9,above VWAP; opening-range breakout; short-term up; volume 2.6x normal; +1.1% last 30 min
