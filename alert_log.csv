@@ -366,3 +366,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,11:39:42,KEC,CONFIRMED,300.95,298.15,305.15,5.6,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.7x normal
 2026-11-25,11:39:42,SRF,CONFIRMED,2551.9,2539.15,2571.0,5.4,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-25,11:39:42,AJANTPHARM,CONFIRMED,3378.1,3360.8,3404.05,5.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-25,11:44:43,SBICARD,CONFIRMED,594.35,589.65,601.4,6.8,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 3.2x normal; +0.7% last 30 min
+2026-11-25,11:44:43,ENDURANCE,CONFIRMED,2607.8,2593.05,2629.9,5.4,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 1.6x normal; RSI 78 stretched; +0.6% last 30 min
+2026-11-25,11:44:43,ETERNAL,EARLY,375.2,372.55,379.15,4.0,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.9x normal; already extended; +0.5% last 30 min; +0.6% in 15 min on 2.6x volume
