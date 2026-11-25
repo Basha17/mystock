@@ -383,3 +383,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,12:39:42,SCHNEIDER,CONFIRMED,1018.4,1009.55,1031.65,5.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-25,12:39:42,DOMS,EARLY,2197.6,2180.65,2223.0,4.4,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 2.6x normal; RSI 78 stretched; already extended; +1.0% last 30 min; +0.9% in 15 min on 2.3x volume
 2026-11-25,12:49:42,LGEINDIA,CONFIRMED,1814.0,1802.2,1831.75,5.8,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal
+2026-11-25,13:04:42,BEL,CONFIRMED,402.3,400.45,405.1,5.2,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.7x normal
