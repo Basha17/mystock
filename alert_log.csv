@@ -354,3 +354,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,11:04:43,ANTHEM,CONFIRMED,973.25,965.35,985.1,5.3,above VWAP; opening-range breakout; short-term up; volume 2.0x normal; +0.8% last 30 min
 2026-11-25,11:04:43,BAJAJFINSV,EARLY,1944.0,1928.85,1966.75,4.6,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.5x normal; RSI 80 stretched; already extended; +0.9% last 30 min; +0.9% in 15 min on 4.3x volume
 2026-11-25,11:24:43,SBILIFE,CONFIRMED,1847.8,1836.15,1865.3,6.6,above VWAP; +1.0% from open; opening-range breakout; short-term up; volume 4.3x normal
+2026-11-25,11:29:42,BEML,EARLY,2062.0,2045.9,2086.15,4.0,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.9x normal; RSI 78 stretched; already extended; +1.0% last 30 min; +0.9% in 15 min on 2.2x volume
