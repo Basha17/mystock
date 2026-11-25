@@ -310,3 +310,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,09:59:43,DABUR,CONFIRMED,412.2,407.4,419.4,6.4,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 2.6x normal; +0.6% last 30 min
 2026-11-25,09:59:43,ITC,CONFIRMED,306.5,304.15,310.05,6.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 2.7x normal; +0.5% last 30 min
 2026-11-25,09:59:43,AUBANK,CONFIRMED,1008.5,997.4,1025.15,6.1,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 2.4x normal; +0.4% last 30 min
+2026-11-25,10:04:42,CIPLA,CONFIRMED,1425.0,1414.75,1440.4,5.4,above VWAP; opening-range breakout; short-term up; volume 3.4x normal; RSI 79 stretched; +0.7% last 30 min
