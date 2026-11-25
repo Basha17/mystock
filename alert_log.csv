@@ -393,3 +393,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,13:54:42,VIJAYA,CONFIRMED,1621.4,1606.3,1644.0,5.6,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 2.3x normal
 2026-11-25,14:04:42,PRIVISCL,EARLY,3652.4,3628.85,3687.7,2.4,above VWAP; +1.9% from open; opening-range breakout; short-term up; RSI 75 stretched; already extended; +0.9% last 30 min; +0.7% in 15 min on 5.3x volume
 2026-11-25,14:09:43,DMART,CONFIRMED,3565.9,3535.5,3611.5,7.2,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 4.5x normal; +0.7% last 30 min
+2026-11-25,14:34:42,ZENTEC,CONFIRMED,1705.8,1695.15,1721.75,5.8,above VWAP; opening-range breakout; fresh EMA bullish cross; volume 1.6x normal; +0.6% last 30 min
