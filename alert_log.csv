@@ -361,3 +361,8 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,11:34:42,ETERNAL,CONFIRMED,372.9,370.35,376.7,5.4,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.9x normal
 2026-11-25,11:34:42,NHPC,CONFIRMED,76.7,76.25,77.35,5.4,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.8x normal
 2026-11-25,11:34:42,OBEROIRLTY,WATCH,1885.9,1870.7,1908.7,5.2,above VWAP; +1.4% from open; opening-range breakout; short-term up; +1.0% last 30 min
+2026-11-25,11:39:42,ACUTAAS,WATCH,3944.3,3905.55,4002.4,5.7,above VWAP; +1.9% from open; opening-range breakout; short-term up; +1.7% last 30 min
+2026-11-25,11:39:42,ABB,CONFIRMED,7033.0,6985.5,7104.25,5.6,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 1.6x normal; RSI 78 stretched; +0.8% last 30 min
+2026-11-25,11:39:42,KEC,CONFIRMED,300.95,298.15,305.15,5.6,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.7x normal
+2026-11-25,11:39:42,SRF,CONFIRMED,2551.9,2539.15,2571.0,5.4,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-25,11:39:42,AJANTPHARM,CONFIRMED,3378.1,3360.8,3404.05,5.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.6x normal
