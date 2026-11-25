@@ -320,3 +320,7 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,10:14:42,POWERGRID,WATCH,264.9,262.85,267.95,5.4,above VWAP; +1.7% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-25,10:14:42,IKS,CONFIRMED,1651.3,1637.9,1671.35,5.3,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-25,10:14:42,GODREJCP,WATCH,933.3,924.65,946.25,5.0,above VWAP; +1.9% from open; opening-range breakout; short-term up; +1.0% last 30 min
+2026-11-25,10:19:43,EMAMILTD,CONFIRMED,429.0,424.65,435.5,7.4,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 4.4x normal; +0.9% last 30 min
+2026-11-25,10:19:43,TATACONSUM,CONFIRMED,1175.9,1164.8,1192.55,7.0,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 4.9x normal; +0.5% last 30 min
+2026-11-25,10:19:43,DABUR,EARLY,414.3,409.05,422.15,4.8,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 2.8x normal; already extended; +0.9% last 30 min; +1.2% in 15 min on 3.1x volume
+2026-11-25,10:19:43,ICICILIFE,EARLY,489.8,483.85,498.7,3.8,above VWAP; +3.7% from open; opening-range breakout; short-term up; volume 2.6x normal; RSI 78 stretched; already extended; +0.5% last 30 min; +0.7% in 15 min on 5.3x volume
