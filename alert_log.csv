@@ -430,3 +430,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,11:15:01,CIPLA,EARLY,1468.6,1457.95,1484.6,4.0,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 1.7x normal; RSI 85 stretched; already extended; +1.2% last 30 min; +1.0% in 15 min on 3.4x volume
 2026-11-26,11:25:02,SOBHA,CONFIRMED,1265.2,1256.5,1278.25,5.3,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-26,11:25:02,ABSLAMC,EARLY,993.3,983.1,1008.6,4.5,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 2.3x normal; already extended; +0.8% last 30 min; +1.2% in 15 min on 7.1x volume
+2026-11-26,11:30:01,NAVINFLUOR,CONFIRMED,10123.0,10055.1,10224.85,6.4,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 1.9x normal; +0.9% last 30 min
+2026-11-26,11:30:01,NATIONALUM,CONFIRMED,298.45,295.7,302.55,5.6,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 1.6x normal; +0.4% last 30 min
