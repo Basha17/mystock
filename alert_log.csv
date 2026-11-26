@@ -426,3 +426,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,10:40:00,APARINDS,CONFIRMED,14520.0,14413.7,14679.5,5.4,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.8x normal
 2026-11-26,10:40:00,CAMS,EARLY,745.2,737.1,757.35,4.7,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 1.6x normal; already extended; +1.4% last 30 min; +1.1% in 15 min on 4.2x volume
 2026-11-26,10:55:02,GVT&D,EARLY,4238.0,4196.1,4300.8,4.4,above VWAP; +3.7% from open; opening-range breakout; short-term up; volume 2.0x normal; RSI 84 stretched; already extended; +1.4% last 30 min; +1.0% in 15 min on 3.6x volume
+2026-11-26,11:05:01,ZENSARTECH,EARLY,556.0,549.5,565.75,2.8,above VWAP; +3.3% from open; opening-range breakout; short-term up; already extended; +0.7% last 30 min; +0.8% in 15 min on 2.7x volume
