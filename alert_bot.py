@@ -10,7 +10,10 @@
 #           MIN_TURNOVER_CR (10 = Rs 10 crore average daily traded value),
 #           MAX_EARLY (3), EARLY_MIN_ACCEL (0.6 = % rise in 15 min), EARLY_MIN_VOL (1.5),
 #           COST_PCT (0.15 = estimated round-trip cost in % used by the outcome log),
-#           HEARTBEAT (1 = hourly check-in message, 0 = off)
+#           HEARTBEAT (1 = hourly check-in message, 0 = off),
+#           MAX_PATTERN (3), FAST_WAIT (120 = seconds until the next scan after an alert),
+#           MAX_FAST_STREAK (3 = quick rescans in a row), MAX_EXTRA_REFRESH (6 = extra whole-market
+#           rescans a day when the list is quiet), EXTRA_COOLDOWN_MIN (20 = minutes between refreshes)
 # Modes: 'python alert_bot.py' = one scan, 'python alert_bot.py summary' = score today's alerts
 #        and send the daily summary.
 
@@ -43,6 +46,12 @@ COST_PCT = float(os.getenv("COST_PCT", "0.15"))               # estimated round-
 REFRESH_SLOTS = [(9, 30), (10, 30), (11, 30), (12, 30), (13, 30)]   # hourly watchlist refresh
 LOG_FILE = "alert_log.csv"
 OUTCOME_FILE = "alert_outcomes.csv"
+NEXT_WAIT_FILE = "next_wait.txt"                              # read by the workflow loop
+MAX_PATTERN = int(os.getenv("MAX_PATTERN", "3"))              # max PATTERN alerts per scan
+FAST_WAIT = int(os.getenv("FAST_WAIT", "120"))                # seconds until the next scan after an alert
+MAX_FAST_STREAK = int(os.getenv("MAX_FAST_STREAK", "3"))      # quick rescans in a row
+MAX_EXTRA_REFRESH = int(os.getenv("MAX_EXTRA_REFRESH", "6"))  # extra whole-market rescans per day
+EXTRA_COOLDOWN_MIN = int(os.getenv("EXTRA_COOLDOWN_MIN", "20"))   # minutes between any two refreshes
 
 UNIVERSE_URL = "https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv"
 
@@ -69,6 +78,90 @@ def rsi(close, period=14):
     gain = delta.clip(lower=0).ewm(alpha=1 / period, adjust=False).mean()
     loss = (-delta.clip(upper=0)).ewm(alpha=1 / period, adjust=False).mean()
     return 100 - (100 / (1 + gain / loss))
+
+
+PATTERN_PRIORITY = {"DOUBLE BOTTOM": 0, "ASC TRIANGLE": 1, "BULL FLAG": 2, "BASE BREAKOUT": 3}
+
+
+def _collapse(idx):
+    """Merge swing points that sit within 2 candles of each other (equal highs/lows on a plateau)."""
+    out = []
+    for i in idx:
+        if not out or i - out[-1] > 2:
+            out.append(i)
+    return out
+
+
+def find_patterns(t, atr, last):
+    """Bullish chart patterns on today's 5-minute candles that have JUST broken out.
+    Returns a list of dicts (name, level, low, detail), best pattern first."""
+    out = []
+    n = len(t)
+    if n < 14 or atr <= 0:
+        return out
+    hi = t["High"].to_numpy(dtype=float)
+    lo = t["Low"].to_numpy(dtype=float)
+    cl = t["Close"].to_numpy(dtype=float)
+    vol = t["Volume"].to_numpy(dtype=float)
+
+    def broke_out(level):
+        """Closed above the level within the last two candles and is still close to it."""
+        return (last > level + 0.1 * atr and (last - level) <= 3 * atr
+                and cl[-4:-1].max() <= level + 0.5 * atr)
+
+    # 1) Base / flag: a tight 8-candle sideways range, then a break up on volume
+    B = 8
+    base_hi, base_lo = hi[-(B + 2):-2].max(), lo[-(B + 2):-2].min()
+    width = base_hi - base_lo
+    if width <= 3 * atr and width / last <= 0.01 and broke_out(base_hi):
+        base_vol = vol[-(B + 2):-2].mean()
+        if base_vol > 0 and vol[-2:].mean() >= 1.3 * base_vol:
+            pole = (cl[-(B + 3)] / cl[-(B + 9)] - 1) * 100 if n >= B + 9 else 0.0
+            name = "BULL FLAG" if pole >= 1.0 else "BASE BREAKOUT"
+            extra = f", pole +{pole:.1f}%" if name == "BULL FLAG" else ""
+            out.append({"name": name, "level": base_hi, "low": base_lo,
+                        "detail": f"broke above {base_hi:.2f} after a tight base {base_lo:.2f}-{base_hi:.2f}{extra}"})
+
+    # 2) Ascending triangle: flat resistance touched twice or more, rising lows, then a break
+    s = max(2, n - 30)
+    swing_hi = _collapse([i for i in range(s, n - 2) if hi[i] == hi[i - 2:i + 3].max()])
+    swing_lo = _collapse([i for i in range(s, n - 2) if lo[i] == lo[i - 2:i + 3].min()])
+    if len(swing_hi) >= 2:
+        top = max(hi[i] for i in swing_hi)
+        touches = [i for i in swing_hi if hi[i] >= top * (1 - 0.0035)]
+        if len(touches) >= 2 and touches[-1] - touches[0] >= 4:
+            lows = [i for i in swing_lo if i > touches[0]]
+            rising = len(lows) >= 2 and all(lo[b] >= lo[a] + 0.05 * atr for a, b in zip(lows, lows[1:]))
+            if rising and broke_out(top):
+                out.append({"name": "ASC TRIANGLE", "level": top, "low": lo[lows[-1]],
+                            "detail": f"broke above flat resistance {top:.2f} on higher lows "
+                                      f"{lo[lows[0]]:.2f} to {lo[lows[-1]]:.2f}"})
+
+    # 3) Double bottom: two lows within 0.3%, at least 6 candles apart, then a break of the middle peak
+    s2 = max(2, n - 40)
+    lows2 = _collapse([i for i in range(s2, n - 2) if lo[i] == lo[i - 2:i + 3].min()])
+    found = False
+    for j in range(len(lows2) - 1, 0, -1):
+        b = lows2[j]
+        if n - b > 25:
+            continue
+        for k in range(j - 1, -1, -1):
+            a = lows2[k]
+            if b - a < 6 or abs(lo[a] - lo[b]) / lo[a] > 0.003:
+                continue
+            neck = hi[a:b + 1].max()
+            if neck - max(lo[a], lo[b]) < max(0.006 * last, 2 * atr):
+                continue
+            if broke_out(neck):
+                out.append({"name": "DOUBLE BOTTOM", "level": neck, "low": min(lo[a], lo[b]),
+                            "detail": f"broke above the middle peak {neck:.2f} after two lows near {min(lo[a], lo[b]):.2f}"})
+                found = True
+                break
+        if found:
+            break
+
+    out.sort(key=lambda p: PATTERN_PRIORITY[p["name"]])
+    return out
 
 
 def analyse_df(symbol, df):
@@ -252,12 +345,28 @@ def analyse_df(symbol, df):
         stop, target = tick(last - risk), tick(last + 1.5 * risk)
         why.append(f"+{accel15:.1f}% in 15 min on {vol3_x:.1f}x volume")
 
+    # PATTERN: a bullish chart pattern that has just broken out (see find_patterns).
+    # The stop sits just under the pattern's low (kept between 1.5 and 4 ATR below), target = 1.5x the risk.
+    pattern_name = ""
+    patterns = find_patterns(t, atr, last)
+    if (patterns and not action.startswith(("BUY NOW", "WATCH")) and not market_closed
+            and not too_early and not too_late and not early_stretched
+            and last > vwap and rising):
+        p = patterns[0]
+        pattern_name = p["name"]
+        stop = tick(min(max(p["low"] - 0.2 * atr, last - 4 * atr), last - 1.5 * atr))
+        target = tick(last + 1.5 * (last - stop))
+        entry = tick(last)
+        action = f"PATTERN BUY ({p['name']})"
+        why.append(f"{p['name']}: {p['detail']}")
+
     return {"stock": symbol, "price": round(last, 2), "mom30": round(mom30, 2),
             "vol_x": round(vol_ratio, 1), "score": score, "quick": round(quick, 1),
             "rise": rise, "action": action, "entry": entry, "stop": stop,
             "target": target, "why": "; ".join(why),
             "turnover_cr": round(turnover_cr, 1),
             "accel15": round(accel15, 2), "vol3_x": round(vol3_x, 1), "fresh": bool(fresh),
+            "pattern": pattern_name,
             "last_date": last_ts.date().isoformat()}
 
 
@@ -382,7 +491,7 @@ def load_watchlist(today):
             return data
     except Exception:
         pass
-    return {"date": today, "refreshed": [], "stocks": list(DEFAULT_WATCHLIST)}
+    return {"date": today, "refreshed": [], "stocks": list(DEFAULT_WATCHLIST), "extra": 0, "last_refresh": ""}
 
 
 def save_watchlist(wl):
@@ -538,7 +647,7 @@ def run_summary():
                      f"{count['OPEN AT 3:15']} still open at 3:15")
         lines.append(f"After est. {COST_PCT:.2f}% cost per trade: average {s['avg']:+.2f}% per alert, "
                      f"total {s['sum']:+.2f}%")
-        for kind in ("CONFIRMED", "WATCH", "EARLY"):
+        for kind in ("CONFIRMED", "WATCH", "EARLY", "PATTERN"):
             rows = [r for r in today_rows if r["kind"] == kind]
             if rows:
                 k = _stats(rows)
@@ -556,13 +665,98 @@ def run_summary():
         days = len({r["date"] for r in outcomes})
         lines.append(f"All days so far ({days} days, {a['n']} alerts): {a['win']:.0f}% positive, "
                      f"average {a['avg']:+.2f}% per alert, total {a['sum']:+.2f}%")
-        for kind in ("CONFIRMED", "WATCH", "EARLY"):
+        for kind in ("CONFIRMED", "WATCH", "EARLY", "PATTERN"):
             rows = [r for r in outcomes if r["kind"] == kind]
             if rows:
                 k = _stats(rows)
                 lines.append(f"  {kind}: {k['n']} alerts, {k['win']:.0f}% positive, average {k['avg']:+.2f}%")
     lines.append("Simulated: assumes fills at the alert price and stop checked first. Real results will differ.")
     notify("\n".join(lines))
+
+
+def is_actionable(res):
+    """Would this stock produce an alert right now (ignoring 'already alerted today')?"""
+    act = res["action"]
+    if act.startswith(("BUY NOW", "WATCH")):
+        return res["quick"] >= MIN_QUICK
+    return act.startswith(("EARLY BUY", "PATTERN BUY"))
+
+
+def list_is_quiet(results):
+    """True when we have data but nothing in the current list is actionable."""
+    return bool(results) and not any(is_actionable(r) for r in results)
+
+
+def extra_refresh_allowed(wl, now):
+    """Extra whole-market rescans: only 9:50-14:30, limited per day, and not too soon after a refresh."""
+    if not ((9, 50) <= (now.hour, now.minute) < (14, 30)):
+        return False
+    if wl.get("extra", 0) >= MAX_EXTRA_REFRESH:
+        return False
+    last = wl.get("last_refresh")
+    if last:
+        try:
+            if (now - datetime.fromisoformat(last)).total_seconds() / 60 < EXTRA_COOLDOWN_MIN:
+                return False
+        except Exception:
+            pass
+    return True
+
+
+def refresh_watchlist(slot, wl, now, force):
+    """Scan the whole universe and keep the strongest stocks. Returns (results, announced)."""
+    wl["last_refresh"] = now.isoformat()
+    silent = slot.startswith("X")          # extra refreshes triggered by a quiet list stay silent
+    announced = False
+    universe = get_universe()
+    all_results = analyse_many(universe)
+    picks = pick_shortlist(all_results)
+    wl["refreshed"].append(slot)
+    if len(picks) >= 10:
+        wl["stocks"] = [r["stock"] for r in picks]
+        results = picks
+        names = ", ".join(r["stock"] for r in picks[:15])
+        print(f"Watchlist refreshed {now.strftime('%H:%M')}: {len(picks)} stocks. Top: {names}")
+        if (len(wl["refreshed"]) == 1 or force) and not silent:   # only announce the first one of the day
+            notify(f"Watchlist refreshed {now.strftime('%H:%M')} IST. "
+                   f"Scanned {len(all_results)} of {len(universe)} stocks, "
+                   f"shortlisted {len(picks)} with the strongest momentum. "
+                   f"It will refresh hourly until 1:30 PM.\n"
+                   f"Top: {names}")
+            announced = True
+    else:
+        print("Shortlist too small; keeping the current watchlist.")
+        if not silent:
+            notify(f"Watchlist refresh at {now.strftime('%H:%M')} IST failed "
+                   f"(only {len(all_results)} stocks had data). Keeping the previous list.")
+            announced = True
+        results = analyse_many(wl["stocks"])
+    save_watchlist(wl)
+    return results, announced
+
+
+def set_next_wait(state, today, alerted):
+    """Tell the workflow loop how long to wait before the next scan.
+    After an alert: FAST_WAIT seconds, up to MAX_FAST_STREAK scans in a row. Otherwise the normal 5 minutes
+    (no file)."""
+    streak = 0
+    try:
+        prev = str(state.get("_fast", ""))
+        if prev.startswith(today):
+            streak = int(prev.split("|")[1])
+    except Exception:
+        streak = 0
+    if alerted:
+        streak += 1
+        state["_fast"] = f"{today}|{streak}"
+        if streak <= MAX_FAST_STREAK:
+            with open(NEXT_WAIT_FILE, "w") as f:
+                f.write(str(FAST_WAIT))
+            return
+    else:
+        state["_fast"] = f"{today}|0"
+    if os.path.exists(NEXT_WAIT_FILE):
+        os.remove(NEXT_WAIT_FILE)
 
 
 # ---------------------------------------------------------------- main
@@ -586,6 +780,9 @@ def main():
         print("Outside market hours, nothing to do.", now)
         return
 
+    if os.path.exists(NEXT_WAIT_FILE):
+        os.remove(NEXT_WAIT_FILE)   # stale hint from the previous scan
+
     today = now.date().isoformat()
     state = load_state(today)
     wl = load_watchlist(today)
@@ -604,37 +801,21 @@ def main():
 
     sent_note = False
     if slot:
-        universe = get_universe()
-        all_results = analyse_many(universe)
-        picks = pick_shortlist(all_results)
-        wl["refreshed"].append(slot)
-        if len(picks) >= 10:
-            wl["stocks"] = [r["stock"] for r in picks]
-            results = picks
-            names = ", ".join(r["stock"] for r in picks[:15])
-            print(f"Watchlist refreshed {now.strftime('%H:%M')}: {len(picks)} stocks. Top: {names}")
-            if len(wl["refreshed"]) == 1 or force_refresh:   # only announce the first one of the day
-                notify(f"Watchlist refreshed {now.strftime('%H:%M')} IST. "
-                       f"Scanned {len(all_results)} of {len(universe)} stocks, "
-                       f"shortlisted {len(picks)} with the strongest momentum. "
-                       f"It will refresh hourly until 1:30 PM.\n"
-                       f"Top: {names}")
-                sent_note = True
-        else:
-            print("Shortlist too small; keeping the current watchlist.")
-            notify(f"Watchlist refresh at {now.strftime('%H:%M')} IST failed "
-                   f"(only {len(all_results)} stocks had data). Keeping the previous list.")
-            sent_note = True
-            results = analyse_many(wl["stocks"])
-        save_watchlist(wl)
+        results, sent_note = refresh_watchlist(slot, wl, now, force_refresh)
     else:
         results = analyse_many(wl["stocks"])
+        # Nothing worth alerting in the current list -> look for the movers in the whole market again
+        if list_is_quiet(results) and extra_refresh_allowed(wl, now):
+            print("No strong movement in the current list - rescanning the whole market.")
+            wl["extra"] = wl.get("extra", 0) + 1
+            slot = "X" + now.strftime("%H%M")
+            results, sent_note = refresh_watchlist(slot, wl, now, False)
 
     hour_tag = f"{today}|{now.hour:02d}"
     if sent_note:
         state["_heartbeat"] = hour_tag   # that note already counts as a check-in
 
-    candidates, early = [], []
+    candidates, early, patt = [], [], []
     for res in results:
         act = res["action"]
         # CONFIRMED / WATCH: actionable buys with strong quick-rise strength
@@ -645,6 +826,11 @@ def main():
             if prev is None or (str(prev).endswith("STRONG") and res["rise"] == "HOT"):
                 kind = "CONFIRMED" if act.startswith("BUY NOW") else "WATCH"
                 candidates.append((key, res, kind))
+        # PATTERN: chart pattern breakout, once per stock per day
+        elif act.startswith("PATTERN BUY"):
+            key = f"{res['stock']}:PATTERN"
+            if state.get(key) is None:
+                patt.append((key, res, "PATTERN"))
         # EARLY: rising fast on volume, once per stock per day
         elif act.startswith("EARLY BUY"):
             key = f"{res['stock']}:EARLY"
@@ -653,32 +839,39 @@ def main():
 
     candidates.sort(key=lambda x: x[1]["quick"], reverse=True)
     early.sort(key=lambda x: x[1]["accel15"], reverse=True)
-    candidates = (candidates + early[:MAX_EARLY])[:MAX_ALERTS]
+    patt.sort(key=lambda x: x[1]["quick"], reverse=True)
+    candidates = (candidates + patt[:MAX_PATTERN] + early[:MAX_EARLY])[:MAX_ALERTS]
 
     if not candidates:
         print("No new buy signals.", now.strftime("%H:%M"), "stocks scanned:", len(results))
         if HEARTBEAT and state.get("_heartbeat") != hour_tag:
             send_heartbeat(results, now)
             state["_heartbeat"] = hour_tag
+        set_next_wait(state, today, False)
         save_state(state)
         return
 
     lines = [f"NSE BUY alerts {now.strftime('%H:%M')} IST", ""]
     for i, (key, res, kind) in enumerate(candidates, 1):
-        lines.append(f"{i}. [{kind}] {res['stock']} @ {res['entry']}  (quick {res['quick']})")
+        tag = f"  - {res['pattern']}" if kind == "PATTERN" and res.get("pattern") else ""
+        lines.append(f"{i}. [{kind}] {res['stock']} @ {res['entry']}  (quick {res['quick']}){tag}")
         lines.append(f"   Stop {res['stop']} | Target {res['target']}")
         lines.append(f"   30-min {res['mom30']:+.1f}% | 15-min {res['accel15']:+.1f}% | volume {res['vol_x']}x")
         lines.append(f"   {res['why']}")
         lines.append("")
     lines.append("CONFIRMED = breakout + volume + trend. WATCH = leaning up, not confirmed.")
     lines.append("EARLY = rising fast on volume, not yet confirmed (riskier).")
+    lines.append("PATTERN = chart pattern breakout (flag, base, triangle, double bottom); stop sits under the pattern.")
     lines.append("Momentum signals, not a guaranteed rise. Not financial advice. Always use the stop-loss.")
 
+    alerted = False
     if notify("\n".join(lines)):
+        alerted = True
         for key, res, kind in candidates:
-            state[key] = f"{today}|EARLY" if kind == "EARLY" else f"{today}|{res['rise']}"
+            state[key] = f"{today}|{kind}" if kind in ("EARLY", "PATTERN") else f"{today}|{res['rise']}"
             log_alert(res, kind, now)
         state["_heartbeat"] = hour_tag   # an alert counts as a check-in too
+    set_next_wait(state, today, alerted)
     save_state(state)
 
 
