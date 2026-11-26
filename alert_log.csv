@@ -479,3 +479,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,14:11:08,OBEROIRLTY,CONFIRMED,1907.0,1892.3,1929.0,5.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 1.5x normal
 2026-11-26,14:13:08,TATASTEEL,WATCH,162.9,162.15,164.0,5.1,above VWAP; +1.4% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-26,14:15:07,JWL,EARLY,235.4,232.1,240.35,4.1,above VWAP; short-term up; volume 4.8x normal; +1.1% in 15 min on 50.4x volume
+2026-11-26,14:17:07,CANFINHOME,WATCH,786.65,784.55,789.8,5.1,above VWAP; +2.1% from open; opening-range breakout; fresh EMA bullish cross
