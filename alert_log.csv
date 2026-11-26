@@ -395,3 +395,7 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-25,14:09:43,DMART,CONFIRMED,3565.9,3535.5,3611.5,7.2,above VWAP; +2.8% from open; opening-range breakout; short-term up; volume 4.5x normal; +0.7% last 30 min
 2026-11-25,14:34:42,ZENTEC,CONFIRMED,1705.8,1695.15,1721.75,5.8,above VWAP; opening-range breakout; fresh EMA bullish cross; volume 1.6x normal; +0.6% last 30 min
 2026-11-25,14:39:42,MANKIND,WATCH,2680.0,2665.95,2701.05,5.3,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross
+2026-11-26,09:50:00,J&KBANK,CONFIRMED,159.7,157.05,163.65,7.3,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 3.7x normal; RSI 76 stretched; +1.4% last 30 min
+2026-11-26,09:50:00,PARADEEP,CONFIRMED,140.35,138.95,142.45,7.2,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 2.4x normal; +1.5% last 30 min
+2026-11-26,09:50:00,GLENMARK,CONFIRMED,2747.6,2729.25,2775.1,6.4,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.0x normal; +0.9% last 30 min
+2026-11-26,09:50:00,CLEANMAX,CONFIRMED,1258.9,1246.1,1278.1,5.7,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 2.2x normal
