@@ -408,3 +408,12 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,10:15:00,PRESTIGE,CONFIRMED,1725.5,1705.85,1755.0,6.1,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.8% last 30 min
 2026-11-26,10:25:00,SCHAEFFLER,CONFIRMED,3754.0,3701.6,3832.6,7.1,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 22.3x normal; +0.6% last 30 min
 2026-11-26,10:25:00,IGIL,EARLY,433.5,429.7,439.2,0.6,above VWAP; short-term down; +0.7% in 15 min on 1.5x volume
+2026-11-26,10:30:01,LODHA,CONFIRMED,1240.7,1226.5,1262.05,7.2,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.1x normal; +1.7% last 30 min
+2026-11-26,10:30:01,TORNTPHARM,CONFIRMED,4983.2,4946.75,5037.9,6.6,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 12.1x normal
+2026-11-26,10:30:01,HDFCBANK,CONFIRMED,864.85,858.0,875.1,6.0,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 2.0x normal; RSI 76 stretched; +1.0% last 30 min
+2026-11-26,10:30:01,GODREJPROP,CONFIRMED,1970.4,1951.85,1998.25,5.9,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.5x normal; RSI 75 stretched; +1.2% last 30 min
+2026-11-26,10:30:01,SHRIRAMFIN,WATCH,986.0,977.8,998.3,5.8,above VWAP; +1.0% from open; opening-range breakout; fresh EMA bullish cross; +0.6% last 30 min
+2026-11-26,10:30:01,ANANDRATHI,CONFIRMED,2396.6,2382.95,2417.05,5.6,above VWAP; opening-range breakout; short-term up; volume 5.9x normal
+2026-11-26,10:30:01,ABSLAMC,CONFIRMED,982.55,972.45,997.75,5.5,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 2.0x normal
+2026-11-26,10:30:01,BHARATFORG,WATCH,1763.6,1749.8,1784.35,5.1,above VWAP; +1.7% from open; opening-range breakout; short-term up; +1.1% last 30 min
+2026-11-26,10:30:01,BSE,EARLY,3931.4,3899.85,3978.7,4.4,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 2.5x normal; RSI 86 stretched; already extended; +1.1% last 30 min; +1.0% in 15 min on 5.7x volume
