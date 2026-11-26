@@ -454,3 +454,8 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,12:30:08,NAVINFLUOR,CONFIRMED,10181.0,10113.9,10281.65,5.5,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 2.1x normal
 2026-11-26,12:30:08,HDFCBANK,CONFIRMED,869.5,864.9,876.45,5.4,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.8x normal
 2026-11-26,12:30:08,SUNPHARMA,CONFIRMED,1920.9,1910.2,1936.95,5.3,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.7x normal
+2026-11-26,12:32:08,TORNTPHARM,CONFIRMED,4993.6,4960.2,5043.65,7.0,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 7.4x normal; +0.5% last 30 min
+2026-11-26,12:32:08,CHOICEIN,CONFIRMED,761.95,757.9,768.0,6.4,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 3.9x normal
+2026-11-26,12:32:08,ANANDRATHI,CONFIRMED,2404.6,2394.0,2420.5,5.6,above VWAP; opening-range breakout; short-term up; volume 5.2x normal
+2026-11-26,12:32:08,CIPLA,CONFIRMED,1460.0,1452.7,1470.95,5.5,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-26,12:32:08,SARDAEN,CONFIRMED,480.4,477.65,484.55,5.1,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.6x normal
