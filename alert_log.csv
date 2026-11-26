@@ -434,3 +434,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,11:30:01,NATIONALUM,CONFIRMED,298.45,295.7,302.55,5.6,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 1.6x normal; +0.4% last 30 min
 2026-11-26,11:35:01,WELCORP,EARLY,2203.9,2181.0,2238.25,4.9,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 1.8x normal; RSI 80 stretched; already extended; +2.1% last 30 min; +2.2% in 15 min on 5.2x volume
 2026-11-26,11:40:01,ENDURANCE,CONFIRMED,2689.1,2663.55,2727.45,5.6,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 2.3x normal
+2026-11-26,11:45:01,HFCL,CONFIRMED,174.9,172.2,178.95,5.7,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 2.2x normal
+2026-11-26,11:45:01,SUNPHARMA,CONFIRMED,1922.6,1910.95,1940.05,5.1,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-26,11:45:01,JSWINFRA,EARLY,367.95,365.45,371.65,2.6,above VWAP; +1.9% from open; opening-range breakout; short-term up; RSI 82 stretched; already extended; +1.0% last 30 min; +0.8% in 15 min on 1.8x volume
