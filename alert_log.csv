@@ -485,3 +485,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,14:34:07,EMCURE,WATCH,2339.4,2330.6,2352.6,5.4,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
 2026-11-26,14:34:07,SAILIFE,WATCH,1816.3,1807.5,1829.5,5.2,above VWAP; +1.2% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-26,14:34:07,ELGIEQUIP,PATTERN,559.0,554.75,565.4,3.8,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 2.1x normal; RSI 77 stretched; already extended; +0.7% last 30 min; BASE BREAKOUT: broke above 556.80 after a tight base 555.00-556.80
+2026-11-26,14:41:08,CHOICEIN,CONFIRMED,763.85,760.3,769.15,8.0,above VWAP; +2.0% from open; opening-range breakout; fresh EMA bullish cross; volume 3.1x normal; +1.0% last 30 min
+2026-11-26,14:41:08,CEMPRO,WATCH,1432.4,1423.9,1445.15,5.2,above VWAP; +1.4% from open; opening-range breakout; fresh EMA bullish cross
+2026-11-26,14:41:08,IRCTC,EARLY,452.55,450.8,455.15,2.3,above VWAP; +2.2% from open; opening-range breakout; short-term up; RSI 76 stretched; already extended; +0.7% last 30 min; +0.6% in 15 min on 2.6x volume
