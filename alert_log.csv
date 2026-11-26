@@ -406,3 +406,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,10:05:01,DOMS,WATCH,2243.7,2221.2,2277.45,5.2,above VWAP; +1.2% from open; short-term up; volume 3.7x normal; +0.3% last 30 min
 2026-11-26,10:10:00,CHOICEIN,CONFIRMED,761.7,754.65,772.3,7.1,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 4.3x normal; +0.6% last 30 min
 2026-11-26,10:15:00,PRESTIGE,CONFIRMED,1725.5,1705.85,1755.0,6.1,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.8% last 30 min
+2026-11-26,10:25:00,SCHAEFFLER,CONFIRMED,3754.0,3701.6,3832.6,7.1,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 22.3x normal; +0.6% last 30 min
+2026-11-26,10:25:00,IGIL,EARLY,433.5,429.7,439.2,0.6,above VWAP; short-term down; +0.7% in 15 min on 1.5x volume
