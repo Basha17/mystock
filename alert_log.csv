@@ -468,3 +468,8 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,12:51:07,BRITANNIA,CONFIRMED,5190.7,5149.35,5252.75,5.8,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.5x normal
 2026-11-26,13:01:08,ABBOTINDIA,CONFIRMED,27200.0,27014.95,27477.55,6.1,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 1.7x normal; +0.7% last 30 min
 2026-11-26,13:01:08,ZENTEC,CONFIRMED,1756.1,1741.9,1777.4,5.2,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 1.5x normal
+2026-11-26,13:33:08,ELGIEQUIP,CONFIRMED,555.9,552.6,560.85,6.5,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 2.0x normal; +1.0% last 30 min
+2026-11-26,13:33:08,HCLTECH,WATCH,1420.2,1412.05,1432.4,5.6,above VWAP; +1.9% from open; opening-range breakout; fresh EMA bullish cross; +0.5% last 30 min
+2026-11-26,13:33:08,LAURUSLABS,CONFIRMED,2509.8,2494.95,2532.05,5.6,above VWAP; +2.0% from open; opening-range breakout; short-term up; volume 2.2x normal
+2026-11-26,13:33:08,ZENSARTECH,WATCH,552.6,549.3,557.55,5.5,above VWAP; +2.6% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
+2026-11-26,13:33:08,GODREJPROP,EARLY,1987.0,1969.5,2013.25,4.7,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 1.7x normal; already extended; +1.4% last 30 min; +1.1% in 15 min on 7.3x volume
