@@ -459,3 +459,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,12:32:08,ANANDRATHI,CONFIRMED,2404.6,2394.0,2420.5,5.6,above VWAP; opening-range breakout; short-term up; volume 5.2x normal
 2026-11-26,12:32:08,CIPLA,CONFIRMED,1460.0,1452.7,1470.95,5.5,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.6x normal
 2026-11-26,12:32:08,SARDAEN,CONFIRMED,480.4,477.65,484.55,5.1,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.6x normal
+2026-11-26,12:34:08,ENDURANCE,CONFIRMED,2717.1,2693.15,2753.05,5.9,above VWAP; +2.2% from open; opening-range breakout; short-term up; volume 1.7x normal; +0.5% last 30 min
+2026-11-26,12:34:08,ZENTEC,EARLY,1758.9,1745.05,1779.65,2.9,above VWAP; +3.1% from open; opening-range breakout; short-term up; RSI 82 stretched; already extended; +1.2% last 30 min; +0.7% in 15 min on 2.3x volume
