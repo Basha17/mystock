@@ -1,6 +1,6 @@
 name: NSE scanner
 
-# One job per trading day that loops internally every 5 minutes.
+# One job per trading day that loops internally every 5 minutes (about 2 minutes right after an alert).
 # It only needs ONE trigger per day (plus a backup), instead of GitHub's
 # unreliable "every 5 minutes" schedule.
 # The alert log (alert_log.csv, alert_outcomes.csv) is saved back to the repo.
@@ -102,10 +102,15 @@ jobs:
           END=$(date -u -d "09:45" +%s)
           echo "Loop started $(date -u). Stops at $(date -u -d @"$END")."
           while [ "$(date +%s)" -lt "$END" ]; do
+            rm -f next_wait.txt
             START=$(date +%s)
             python alert_bot.py || echo "scan failed, continuing"
             save_log
-            WAIT=$((300 - ($(date +%s) - START)))
+            # 5 minutes normally; the bot asks for a quicker rescan (about 2 minutes) right after an alert
+            TARGET=300
+            if [ -f next_wait.txt ]; then TARGET=$(cat next_wait.txt); fi
+            case "$TARGET" in ''|*[!0-9]*) TARGET=300 ;; esac
+            WAIT=$((TARGET - ($(date +%s) - START)))
             if [ "$WAIT" -gt 0 ]; then sleep "$WAIT"; fi
           done
           echo "Loop finished $(date -u)."
