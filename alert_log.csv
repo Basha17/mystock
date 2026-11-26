@@ -482,3 +482,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,14:17:07,CANFINHOME,WATCH,786.65,784.55,789.8,5.1,above VWAP; +2.1% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-26,14:27:07,DLF,WATCH,809.55,804.75,816.8,5.6,above VWAP; +2.0% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
 2026-11-26,14:27:07,IRCTC,WATCH,450.15,448.85,452.1,5.3,above VWAP; +1.7% from open; opening-range breakout; fresh EMA bullish cross
+2026-11-26,14:34:07,EMCURE,WATCH,2339.4,2330.6,2352.6,5.4,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross; +0.4% last 30 min
+2026-11-26,14:34:07,SAILIFE,WATCH,1816.3,1807.5,1829.5,5.2,above VWAP; +1.2% from open; opening-range breakout; fresh EMA bullish cross
+2026-11-26,14:34:07,ELGIEQUIP,PATTERN,559.0,554.75,565.4,3.8,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 2.1x normal; RSI 77 stretched; already extended; +0.7% last 30 min; BASE BREAKOUT: broke above 556.80 after a tight base 555.00-556.80
