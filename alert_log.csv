@@ -444,3 +444,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,12:10:01,CIPLA,CONFIRMED,1458.6,1449.6,1472.05,5.4,above VWAP; +1.3% from open; opening-range breakout; short-term up; volume 1.7x normal
 2026-11-26,12:10:01,CUMMINSIND,WATCH,4191.0,4161.05,4235.9,5.1,above VWAP; +3.0% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-26,12:20:01,ABREL,EARLY,1317.1,1306.9,1332.45,4.8,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 3.4x normal; already extended; +0.6% last 30 min; +0.6% in 15 min on 1.7x volume
+2026-11-26,12:25:02,TORNTPHARM,CONFIRMED,4990.0,4955.65,5041.5,7.8,above VWAP; +1.5% from open; opening-range breakout; fresh EMA bullish cross; volume 7.8x normal
