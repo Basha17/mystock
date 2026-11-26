@@ -404,3 +404,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,09:55:01,PARADEEP,EARLY,141.6,140.1,143.9,5.3,above VWAP; +3.5% from open; opening-range breakout; short-term up; volume 2.7x normal; RSI 77 stretched; already extended; +2.4% last 30 min; +2.6% in 15 min on 4.3x volume
 2026-11-26,10:05:01,CHOICEIN,WATCH,759.8,752.75,770.35,5.6,above VWAP; +1.4% from open; short-term up; volume 4.4x normal; +0.6% last 30 min
 2026-11-26,10:05:01,DOMS,WATCH,2243.7,2221.2,2277.45,5.2,above VWAP; +1.2% from open; short-term up; volume 3.7x normal; +0.3% last 30 min
+2026-11-26,10:10:00,CHOICEIN,CONFIRMED,761.7,754.65,772.3,7.1,above VWAP; +1.7% from open; opening-range breakout; short-term up; volume 4.3x normal; +0.6% last 30 min
