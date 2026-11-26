@@ -422,3 +422,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,10:35:00,NAM-INDIA,WATCH,1049.0,1039.25,1063.6,5.4,above VWAP; +1.8% from open; opening-range breakout; short-term up; +1.4% last 30 min
 2026-11-26,10:35:00,GVT&D,CONFIRMED,4185.2,4146.6,4243.1,5.2,above VWAP; +2.4% from open; opening-range breakout; short-term up; volume 1.8x normal; RSI 76 stretched; +0.3% last 30 min
 2026-11-26,10:35:00,TARIL,WATCH,294.55,291.95,298.4,5.2,above VWAP; +2.5% from open; opening-range breakout; short-term up; +1.0% last 30 min
+2026-11-26,10:40:00,SWIGGY,WATCH,182.25,180.15,185.4,5.6,above VWAP; +2.2% from open; opening-range breakout; short-term up; RSI 77 stretched; +2.7% last 30 min
+2026-11-26,10:40:00,APARINDS,CONFIRMED,14520.0,14413.7,14679.5,5.4,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.8x normal
+2026-11-26,10:40:00,CAMS,EARLY,745.2,737.1,757.35,4.7,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 1.6x normal; already extended; +1.4% last 30 min; +1.1% in 15 min on 4.2x volume
