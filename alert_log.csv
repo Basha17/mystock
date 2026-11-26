@@ -476,3 +476,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-26,13:45:07,LODHA,PATTERN,1247.6,1235.3,1266.05,4.1,above VWAP; +3.0% from open; opening-range breakout; short-term up; volume 2.1x normal; already extended; +0.6% last 30 min; DOUBLE BOTTOM: broke above the middle peak 1244.70 after two lows near 1236.10
 2026-11-26,13:47:08,ABREL,PATTERN,1322.8,1313.0,1337.5,4.1,above VWAP; +3.3% from open; opening-range breakout; short-term up; volume 2.7x normal; already extended; DOUBLE BOTTOM: broke above the middle peak 1321.90 after two lows near 1313.70
 2026-11-26,13:59:08,LODHA,EARLY,1255.9,1243.9,1273.9,4.4,above VWAP; +3.7% from open; opening-range breakout; short-term up; volume 2.7x normal; RSI 75 stretched; already extended; +1.1% last 30 min; +0.8% in 15 min on 20.2x volume
+2026-11-26,14:11:08,OBEROIRLTY,CONFIRMED,1907.0,1892.3,1929.0,5.3,above VWAP; +1.8% from open; opening-range breakout; short-term up; volume 1.5x normal
