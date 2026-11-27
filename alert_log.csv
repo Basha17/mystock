@@ -556,3 +556,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,12:29:38,AETHER,EARLY,1760.6,1744.0,1785.55,3.4,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 1.8x normal; RSI 76 stretched; already extended; +0.6% last 30 min; +0.6% in 15 min on 1.9x volume
 2026-11-27,12:31:39,STARHEALTH,WATCH,572.7,570.05,576.65,5.2,above VWAP; +1.2% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-27,12:33:38,RAMCOCEM,EARLY,837.1,831.1,846.1,4.1,above VWAP; +1.1% from open; short-term down; volume 3.7x normal; +1.0% in 15 min on 20.2x volume
+2026-11-27,13:25:38,HINDZINC,WATCH,546.2,542.5,551.7,5.8,above VWAP; +1.7% from open; fresh EMA bullish cross; volume 1.8x normal; +0.9% last 30 min
