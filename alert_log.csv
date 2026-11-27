@@ -557,3 +557,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,12:31:39,STARHEALTH,WATCH,572.7,570.05,576.65,5.2,above VWAP; +1.2% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-27,12:33:38,RAMCOCEM,EARLY,837.1,831.1,846.1,4.1,above VWAP; +1.1% from open; short-term down; volume 3.7x normal; +1.0% in 15 min on 20.2x volume
 2026-11-27,13:25:38,HINDZINC,WATCH,546.2,542.5,551.7,5.8,above VWAP; +1.7% from open; fresh EMA bullish cross; volume 1.8x normal; +0.9% last 30 min
+2026-11-27,13:27:38,HINDZINC,CONFIRMED,547.35,543.45,553.25,7.5,above VWAP; +1.9% from open; opening-range breakout; fresh EMA bullish cross; volume 1.9x normal; +1.1% last 30 min
+2026-11-27,13:27:38,AEGISLOG,EARLY,1270.8,1254.15,1295.75,3.7,above VWAP; +3.7% from open; opening-range breakout; short-term up; RSI 78 stretched; already extended; +2.5% last 30 min; +0.9% in 15 min on 11.3x volume
