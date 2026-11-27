@@ -541,3 +541,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,10:49:39,GLENMARK,EARLY,2829.7,2803.1,2869.6,5.1,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 2.3x normal; RSI 83 stretched; already extended; +2.2% last 30 min; +1.7% in 15 min on 8.9x volume
 2026-11-27,10:59:39,THERMAX,CONFIRMED,2717.1,2697.8,2746.0,5.8,above VWAP; +1.5% from open; opening-range breakout; short-term up; volume 2.2x normal
 2026-11-27,11:01:39,AAVAS,CONFIRMED,1119.6,1112.5,1130.3,6.5,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 4.0x normal
+2026-11-27,11:13:39,PREMIERENE,WATCH,806.3,799.1,817.15,6.5,above VWAP; fresh EMA bullish cross; volume 5.8x normal; +1.5% last 30 min
+2026-11-27,11:13:39,AETHER,CONFIRMED,1741.0,1723.15,1767.8,6.2,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.8x normal; RSI 78 stretched; +1.4% last 30 min
