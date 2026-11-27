@@ -533,3 +533,6 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,10:39:38,COCHINSHIP,CONFIRMED,1137.8,1127.55,1153.15,5.9,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.9x normal; RSI 75 stretched; +0.4% last 30 min
 2026-11-27,10:39:38,SANSERA,WATCH,4749.9,4706.45,4815.05,5.2,above VWAP; +1.7% from open; opening-range breakout; short-term up; +1.2% last 30 min
 2026-11-27,10:39:38,AZAD,EARLY,2423.1,2400.45,2457.05,2.4,above VWAP; +2.6% from open; opening-range breakout; short-term up; RSI 82 stretched; already extended; +0.9% last 30 min; +0.9% in 15 min on 2.9x volume
+2026-11-27,10:44:38,GODFRYPHLP,CONFIRMED,1805.0,1785.9,1833.7,6.6,above VWAP; +2.6% from open; opening-range breakout; short-term up; volume 3.5x normal; +0.3% last 30 min
+2026-11-27,10:44:38,ANTHEM,CONFIRMED,983.5,977.0,993.25,5.6,above VWAP; +1.2% from open; opening-range breakout; short-term up; volume 1.9x normal
+2026-11-27,10:44:38,NCC,CONFIRMED,131.55,130.6,133.05,5.4,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 2.0x normal
