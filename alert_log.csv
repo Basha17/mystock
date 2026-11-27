@@ -543,3 +543,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,11:01:39,AAVAS,CONFIRMED,1119.6,1112.5,1130.3,6.5,above VWAP; +1.6% from open; opening-range breakout; short-term up; volume 4.0x normal
 2026-11-27,11:13:39,PREMIERENE,WATCH,806.3,799.1,817.15,6.5,above VWAP; fresh EMA bullish cross; volume 5.8x normal; +1.5% last 30 min
 2026-11-27,11:13:39,AETHER,CONFIRMED,1741.0,1723.15,1767.8,6.2,above VWAP; +1.9% from open; opening-range breakout; short-term up; volume 1.8x normal; RSI 78 stretched; +1.4% last 30 min
+2026-11-27,11:25:39,LUPIN,CONFIRMED,2036.0,2025.2,2052.2,6.3,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.8x normal; +0.9% last 30 min
