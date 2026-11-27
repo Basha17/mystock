@@ -569,3 +569,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,14:23:38,IFCI,WATCH,58.65,58.2,59.35,6.6,above VWAP; +2.2% from open; opening-range breakout; fresh EMA bullish cross; +1.4% last 30 min
 2026-11-27,14:25:38,APTUS,WATCH,188.4,187.35,190.0,5.5,above VWAP; +1.1% from open; opening-range breakout; fresh EMA bullish cross
 2026-11-27,14:25:38,GRAVITA,WATCH,1473.3,1465.2,1485.45,5.0,above VWAP; +2.1% from open; opening-range breakout; short-term up; +0.9% last 30 min
+2026-11-27,14:27:38,SRF,CONFIRMED,2562.7,2548.7,2583.7,7.0,above VWAP; +1.8% from open; opening-range breakout; fresh EMA bullish cross; volume 1.7x normal; +0.6% last 30 min
+2026-11-27,14:27:38,CHOICEIN,WATCH,773.0,770.0,777.55,6.0,above VWAP; +1.1% from open; fresh EMA bullish cross; volume 3.7x normal
