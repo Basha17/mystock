@@ -513,3 +513,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,10:04:39,UNIONBANK,WATCH,214.7,212.6,217.8,5.0,above VWAP; +2.9% from open; opening-range breakout; short-term up; +1.0% last 30 min
 2026-11-27,10:04:39,GODFRYPHLP,EARLY,1807.0,1790.1,1832.3,5.7,above VWAP; +2.7% from open; opening-range breakout; short-term up; volume 3.8x normal; RSI 87 stretched; already extended; +1.8% last 30 min; +1.7% in 15 min on 13.8x volume
 2026-11-27,10:04:39,JMFINANCIL,EARLY,113.95,113.05,115.35,3.6,above VWAP; +2.8% from open; opening-range breakout; short-term up; RSI 81 stretched; already extended; +1.9% last 30 min; +1.4% in 15 min on 2.3x volume
+2026-11-27,10:09:39,BDL,EARLY,1073.6,1062.95,1089.55,4.6,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 6.9x normal; RSI 81 stretched; already extended; +0.6% last 30 min; +0.7% in 15 min on 4.2x volume
+2026-11-27,10:09:39,COCHINSHIP,EARLY,1132.9,1123.2,1147.5,3.8,above VWAP; +2.1% from open; opening-range breakout; short-term up; volume 2.5x normal; RSI 84 stretched; already extended; +0.5% last 30 min; +0.7% in 15 min on 2.3x volume
