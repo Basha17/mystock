@@ -528,3 +528,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,10:30:38,NLCINDIA,CONFIRMED,234.2,232.05,237.4,6.8,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 2.3x normal; +1.2% last 30 min
 2026-11-27,10:30:38,FINCABLES,CONFIRMED,1175.2,1164.75,1190.9,5.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; volume 1.7x normal
 2026-11-27,10:32:38,NLCINDIA,CONFIRMED,235.1,232.8,238.55,7.2,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 2.3x normal; +1.6% last 30 min
+2026-11-27,10:34:38,NLCINDIA,EARLY,235.65,233.25,239.2,5.1,above VWAP; +3.1% from open; opening-range breakout; short-term up; volume 2.6x normal; RSI 76 stretched; already extended; +1.8% last 30 min; +0.8% in 15 min on 8.2x volume
