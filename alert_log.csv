@@ -572,3 +572,4 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,14:27:38,SRF,CONFIRMED,2562.7,2548.7,2583.7,7.0,above VWAP; +1.8% from open; opening-range breakout; fresh EMA bullish cross; volume 1.7x normal; +0.6% last 30 min
 2026-11-27,14:27:38,CHOICEIN,WATCH,773.0,770.0,777.55,6.0,above VWAP; +1.1% from open; fresh EMA bullish cross; volume 3.7x normal
 2026-11-27,14:34:39,BALKRISIND,CONFIRMED,2366.6,2352.3,2388.0,6.8,above VWAP; +1.6% from open; opening-range breakout; fresh EMA bullish cross; volume 1.8x normal; +0.4% last 30 min
+2026-11-27,14:36:39,IFCI,CONFIRMED,58.85,58.35,59.6,7.0,above VWAP; +2.5% from open; opening-range breakout; short-term up; volume 1.6x normal; +1.7% last 30 min
