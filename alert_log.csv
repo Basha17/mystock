@@ -506,3 +506,5 @@ date,time,stock,kind,entry,stop,target,quick,why
 2026-11-27,09:52:39,APARINDS,CONFIRMED,14450.0,14303.4,14669.9,6.1,above VWAP; +1.4% from open; opening-range breakout; short-term up; volume 1.5x normal; +0.9% last 30 min
 2026-11-27,09:54:39,DATAPATTNS,CONFIRMED,4302.0,4247.95,4383.1,7.7,above VWAP; +2.9% from open; opening-range breakout; short-term up; volume 5.4x normal; RSI 77 stretched; +1.7% last 30 min
 2026-11-27,09:54:39,ANGELONE,EARLY,372.0,367.05,379.4,5.6,above VWAP; +3.2% from open; opening-range breakout; short-term up; volume 4.1x normal; RSI 81 stretched; already extended; +1.6% last 30 min; +1.0% in 15 min on 3.8x volume
+2026-11-27,09:59:39,BERGEPAINT,WATCH,467.0,462.95,473.05,5.3,above VWAP; +1.9% from open; opening-range breakout; short-term up; +1.2% last 30 min
+2026-11-27,09:59:39,EIDPARRY,WATCH,667.45,661.75,675.95,5.3,above VWAP; +1.1% from open; opening-range breakout; short-term up; +1.3% last 30 min
